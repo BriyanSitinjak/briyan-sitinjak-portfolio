@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '../ui/button';
 
 import Nav from '../Nav';
 import MobileNav from '../MobileNav';
+import BriyanIcon from '../../src/assets/logo_briyan_sitinjak.png';
 
 const Header = () => {
   return (
@@ -11,8 +13,14 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href={'/'}>
-          <h1 className="text-4xl font-semibold">
-            Briyan Sitinjak<span className="text-accent">.</span>
+          <h1 className="text-4xl font-semibold flex items-center">
+            <Image
+              src={BriyanIcon}
+              alt="Briyan Sitinjak Icon"
+              width={100}
+              height={100}
+            />
+            <span className="text-accent ml-4">.</span>
           </h1>
         </Link>
 

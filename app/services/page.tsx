@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Services = () => {
   return (
-    <div>Services</div>
-  )
-}
+    <div>
+      <main>
+        <h1 className="font-semibold text-8xl text-center mt-64">COMING SOON THE SERVICES</h1>
+      </main>
+    </div>
+  );
+};
 
-export default Services
+export default Services;

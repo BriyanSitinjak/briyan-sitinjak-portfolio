@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 
 import { HOME_HEADING_INFO } from '@/src/constant/constant';
 
+import Socials from '@/components/Socials';
+
+
 const HomePage = () => {
   return (
     <section className="h-full">
@@ -16,11 +19,14 @@ const HomePage = () => {
               <span className="text-accent">{HOME_HEADING_INFO.name}</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">{HOME_HEADING_INFO.description}</p>
-            <div className="flex flex-col  xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
+              <div className="mb-8 xl:mb-0">
+                <Socials />
+              </div>
             </div>
           </div>
         </div>

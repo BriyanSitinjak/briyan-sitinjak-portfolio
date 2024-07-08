@@ -1,7 +1,13 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaGitlab, FaLinkedin } from 'react-icons/fa';
 
-const Socials = () => {
+interface ISocials {
+  containerStyles: string;
+  iconStytle: string;
+}
+
+const Socials: React.FC<ISocials> = ({ containerStyles, iconStytle }) => {
   const SOCIAL_LINKS = [
     {
       icons: <FaGithub />,
@@ -16,7 +22,22 @@ const Socials = () => {
       path: 'https://www.linkedin.com/in/briyan-sitinjak/'
     }
   ];
-  return <div>Socials</div>;
+  return (
+    <div className={containerStyles}>
+      {SOCIAL_LINKS.map((link, idx) => {
+        return (
+          <Link
+            target='_blank'
+            href={link.path}
+            key={idx}
+            className={iconStytle}
+          >
+            {link.icons}
+          </Link>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Socials;

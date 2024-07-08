@@ -5,15 +5,15 @@ const Socials = () => {
   const SOCIAL_LINKS = [
     {
       icons: <FaGithub />,
-      path: ''
+      path: 'https://github.com/Briyan-NS'
     },
     {
       icons: <FaGitlab />,
-      path: ''
+      path: 'https://gitlab.com/briyan_sitinjak'
     },
     {
       icons: <FaLinkedin />,
-      path: ''
+      path: 'https://www.linkedin.com/in/briyan-sitinjak/'
     }
   ];
   return <div>Socials</div>;

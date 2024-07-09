@@ -36,11 +36,9 @@ const HomePage = () => {
           <div className="order-1 xl:order-none mb-8 xl:mb-8">
             <Photo />
           </div>
-          <div className="testing">
-            <Stats />
-          </div>
         </div>
       </div>
+      <Stats />
     </section>
   );
 };

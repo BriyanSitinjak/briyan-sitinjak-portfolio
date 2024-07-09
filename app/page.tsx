@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { HOME_HEADING_INFO } from '@/src/constant/constant';
 
 import Photo from '@/components/Photo';
+import Stats from '@/components/Stats';
 import Socials from '@/components/Socials';
 
 const HomePage = () => {
@@ -12,7 +13,7 @@ const HomePage = () => {
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left">
+          <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">{HOME_HEADING_INFO.role}</span>
             <h1 className="h1 mb-6">
               {HOME_HEADING_INFO.headingText} <br />
@@ -32,8 +33,11 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="order-1 xl:order-none mb-8 xl:mb-8">
             <Photo />
+          </div>
+          <div className="testing">
+            <Stats />
           </div>
         </div>
       </div>

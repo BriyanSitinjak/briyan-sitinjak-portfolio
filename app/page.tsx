@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
@@ -9,6 +11,13 @@ import Stats from '@/components/Stats';
 import Socials from '@/components/Socials';
 
 const HomePage = () => {
+  
+  const downloadCV = () => {
+    return window.open(
+      'https://drive.google.com/file/d/1a96FtBw9f11k-a_HByuq4XaOgxt7_xh-/view?usp=sharing'
+    );
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -21,7 +30,12 @@ const HomePage = () => {
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">{HOME_HEADING_INFO.description}</p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+                onClick={() => downloadCV()}
+              >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>

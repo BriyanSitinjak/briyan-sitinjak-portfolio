@@ -20,7 +20,7 @@ const ProjectCompleted = () => {
       opts={{
         align: 'center'
       }}
-      className="w-full h-max my-8"
+      className="w-[80%] xl:w-full h-max my-8"
     >
       <CarouselContent>
         {LIST_EXPERIENCES.map((data, idx) => {
@@ -35,7 +35,7 @@ const ProjectCompleted = () => {
                     >
                       {data.name}
                     </CardTitle>
-                    <CardDescription className="text-white/80">{data.description}</CardDescription>
+                    <CardDescription className="text-white/80 xl:text-justify">{data.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Image

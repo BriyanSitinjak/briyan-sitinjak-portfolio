@@ -51,7 +51,7 @@ export const HOME_HEADING_INFO: IHomeHeading = {
     role: 'Frontend - WordPress Developer',
     headingText: "Hello I'm",
     description:
-        'I have always been interested in the development of using the latest technology and put my ideas and thinking into project'
+        "I'm passionate about leveraging cutting-edge tech to bring my ideas to life in projects"
 };
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [

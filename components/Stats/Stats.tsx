@@ -1,34 +1,21 @@
 'use client';
 
-import React from 'react';
 import CountUp from 'react-countup';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '../ui/carousel';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import Image from 'next/image';
-import profilePicture from '@/src/assets/briyan_sitinjak_photo.png';
+import React, { useState } from 'react';
 
-interface IStatsData {
-  id: string;
-  num: number;
-  text: string;
-}
+import TechMastered from '../TechMastered';
+import { IStatsData } from '@/src/constant/type';
+import ProjectCompleted from '../ProjectCompleted';
 
 const Stats = () => {
   const STATS_DATA: IStatsData[] = [
     {
-      id: 'years_experience',
       num: 4,
       text: 'Years of Experience'
     },
     {
       id: 'project_completed',
-      num: 20,
+      num: 22,
       text: 'Projects Completed'
     },
     {
@@ -37,26 +24,35 @@ const Stats = () => {
       text: 'Technologies Mastered'
     },
     {
-      id: 'code_commit',
       num: 1433,
       text: 'Code Commits'
     }
   ];
+
+  const [activeCol, setActiveCol] = useState<string>('');
+
+  const goToSection = (link: string) => {
+    return setActiveCol(link);
+  };
+
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
-      <div className="container mx-auto testing">
+    <section className="py-12 xl:pt-0 xl:pb-0">
+      <div className="container mx-auto">
         <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none:">
           {STATS_DATA.map((data, idx) => {
             return (
               <div
-                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                className={`flex-1 flex gap-4 items-center justify-center xl:justify-start ${
+                  data.id && 'hover:bg-accent rounded-lg cursor-pointer'
+                } ${activeCol === data.id && 'bg-accent'}`}
                 key={idx}
+                onClick={() => data.id && goToSection(data.id)}
               >
                 <CountUp
                   end={data.num}
                   duration={5}
                   delay={2}
-                  className="text-4xl xl:text-6xl font-extrabold"
+                  className="text-4xl xl:text-6xl font-extrabold px-4 py-2"
                 />
                 <p
                   className={`${
@@ -70,47 +66,14 @@ const Stats = () => {
           })}
         </div>
       </div>
-      <div className="container flex justify-center">
-        <Carousel
-          opts={{
-            align: 'center'
-          }}
-          className="w-[50%] h-[48vh] my-8 testing"
-        >
-          <CarouselContent>
-            {STATS_DATA.map((data, idx) => {
-              return (
-                <CarouselItem className="mx-4" key={idx}>
-                  <div className="container">
-                  <Image
-          src={profilePicture}
-          priority
-          quality={100}
-          width={150}
-          height={150}
-          alt="Briyan Sitinjak Photo"
-          className="object-contain"
-        />
-                  </div>
-                  {/* <Card>
-                    <CardHeader>
-                      <CardTitle>{data.text}</CardTitle>
-                      <CardDescription>Bala bala bala bala</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p>Oi oi oi oi oi oi</p>
-                    </CardContent>
-                    <CardFooter>
-                      <p>ah ah ah ah ah </p>
-                    </CardFooter>
-                  </Card> */}
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <div className="container flex justify-center h-[48vh] mb-10">
+        {activeCol === 'project_completed' ? (
+          <ProjectCompleted />
+        ) : activeCol === 'tech_mastered' ? (
+          <TechMastered />
+        ) : (
+          <p className="mt-16">Click one of the four statuses above</p>
+        )}
       </div>
     </section>
   );

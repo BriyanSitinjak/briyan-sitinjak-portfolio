@@ -14,12 +14,7 @@ const Header = () => {
         {/* Logo */}
         <Link href={'/'}>
           <h1 className="text-4xl font-semibold flex items-center">
-            <Image
-              src={BriyanIcon}
-              alt="Briyan Sitinjak Icon"
-              width={100}
-              height={100}
-            />
+            <Image src={BriyanIcon} alt="Briyan Sitinjak Icon" width={100} height={100} />
             <span className="text-accent ml-4">.</span>
           </h1>
         </Link>
@@ -27,7 +22,7 @@ const Header = () => {
         {/* Desktop Nav & Hire Me Button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href={'/contact'}>
+          <Link href={'wa.me/mailto:Imanbriyan@gmail.com'}>
             <Button>Hire Me</Button>
           </Link>
         </div>

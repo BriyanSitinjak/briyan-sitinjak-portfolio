@@ -11,7 +11,6 @@ import Stats from '@/components/Stats';
 import Socials from '@/components/Socials';
 
 const HomePage = () => {
-  
   const downloadCV = () => {
     return window.open(
       'https://drive.google.com/file/d/1a96FtBw9f11k-a_HByuq4XaOgxt7_xh-/view?usp=sharing'
@@ -19,8 +18,8 @@ const HomePage = () => {
   };
 
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
+    <section className="xl:h-[60vh] h-full">
+      <div className="container mx-auto h-full mb-8">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">{HOME_HEADING_INFO.role}</span>
@@ -52,7 +51,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      <div className="container">
+        <Stats />
+      </div>
     </section>
   );
 };

@@ -66,7 +66,7 @@ const Stats = () => {
           })}
         </div>
       </div>
-      <div className="container flex justify-center h-[48vh] mb-10 testing">
+      <div className="container flex justify-center h-[48vh] mb-10">
         {activeCol === 'project_completed' ? (
           <ProjectCompleted />
         ) : activeCol === 'tech_mastered' ? (

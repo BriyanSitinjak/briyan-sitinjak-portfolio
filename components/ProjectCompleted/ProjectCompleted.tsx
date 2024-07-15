@@ -2,12 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import {
   Carousel,
-  CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselContent,
   CarouselPrevious
 } from '../ui/carousel';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+
 import { LIST_EXPERIENCES } from '@/src/constant/constant';
 
 const ProjectCompleted = () => {

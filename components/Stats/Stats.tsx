@@ -20,7 +20,7 @@ const Stats = () => {
     },
     {
       id: 'tech_mastered',
-      num: 9,
+      num: 24,
       text: 'Technologies Mastered'
     },
     {

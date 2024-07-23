@@ -21,7 +21,9 @@ import indoMenaraDigitalWeb from '@/src/assets/indo_menara_dgitial_web.png';
 import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.png';
 import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png';
 
-import { IExperiencesData, IHomeHeading, ILinks } from './type';
+import ReactJsIcon from '@/src/assets/icon_react.svg';
+
+import { IExperiencesData, IHomeHeading, ILinks, ITechMastered } from './type';
 
 export const links:ILinks[] = [
     {
@@ -208,5 +210,108 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
         description: 'Displays a portfolio of Digital Native Agency (DNA) or recently called by Chameleon companies as corporate information portals. This has been developed using VueJs and CSS',
         img: chameleonWeb,
         link: ''
+    },
+]
+
+export const LIST_TECH_MASTERED: ITechMastered[] = [
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
+    },
+    {
+        id: 'reactjs',
+        name: 'ReactJs',
+        icon: ReactJsIcon
     },
 ]

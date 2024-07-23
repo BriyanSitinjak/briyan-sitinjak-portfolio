@@ -22,4 +22,10 @@ export interface IStatsData {
     id?: string;
     num: number;
     text: string;
-  }
+}
+
+export interface ITechMastered {
+    id?: string;
+    name: string;
+    icon: any;
+}

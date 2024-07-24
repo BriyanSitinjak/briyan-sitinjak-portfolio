@@ -217,101 +217,121 @@ export const LIST_TECH_MASTERED: ITechMastered[] = [
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
     {
         id: 'reactjs',
         name: 'ReactJs',
+        altText: 'chameleon_web',
         icon: ReactJsIcon
     },
 ]

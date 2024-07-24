@@ -27,5 +27,6 @@ export interface IStatsData {
 export interface ITechMastered {
     id?: string;
     name: string;
+    altText:string;
     icon: any;
 }

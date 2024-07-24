@@ -20,13 +20,12 @@ const TechMastered = () => {
               <Card key={idx}>
                 <CardContent>
                   <Image
-                    // onClick={() => goToExperience(data.link)}
                     src={tech.icon}
                     quality={100}
                     priority
                     width={120}
                     height={120}
-                    alt={'test'}
+                    alt={tech.altText}
                     className="object-contain cursor-pointer"
                   />
                 </CardContent>

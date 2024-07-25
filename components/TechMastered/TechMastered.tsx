@@ -16,9 +16,9 @@ const TechMastered = () => {
       <CarouselContent>
         {LIST_TECH_MASTERED.map((tech, idx) => {
           return (
-            <CarouselItem className="mx-4 xl:basis-1/2 sm:basis-1/4" key={idx}>
-              <Card key={idx}>
-                <CardContent>
+            <CarouselItem className="mx-4 xl:basis-1/4 sm:basis-1/8" key={idx}>
+              <Card key={idx} className='bg-transparent testing'>
+                <CardContent className='flex flex-row justify-center hover:translate-y-4'>
                   <Image
                     src={tech.icon}
                     quality={100}

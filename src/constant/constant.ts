@@ -22,6 +22,25 @@ import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.png';
 import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
+import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
+import NextJsIcon from '@/src/assets/icon_nextjs.svg';
+import ReduxJsIcon from '@/src/assets/icon_redux.svg';
+import TypescriptIcon from '@/src/assets/icon_typescript.svg';
+import AngularJsIcon from '@/src/assets/icon_angularjs.svg';
+import PHPIcon from '@/src/assets/icon_php.svg';
+import FirebaseIcon from '@/src/assets/icon_firebase.svg';
+import CypressIcon from '@/src/assets/icon_cypress.svg';
+import SentryIcon from '@/src/assets/icon_sentry.svg';
+import StoryBookIcon from '@/src/assets/icon_storybook.svg';
+import GithubIcon from '@/src/assets/icon_github.svg';
+import GitlabIcon from '@/src/assets/icon_gitlab.svg';
+import TailwindIcon from '@/src/assets/icon_tailwindsvg.svg';
+import SASSIcon from '@/src/assets/icon_sass.svg';
+import MaterialIcon from '@/src/assets/icon_material.svg';
+import FramerMotionIcon from '@/src/assets/icon_framer_motion.svg';
+import WordPressIcon from '@/src/assets/icon_wordpress.svg';
+import ElementorIcon from '@/src/assets/icon_elementor.svg';
+import WoocommerceIcon from '@/src/assets/icon_woocommerce.svg';
 
 import { IExperiencesData, IHomeHeading, ILinks, ITechMastered } from './type';
 
@@ -215,123 +234,123 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
 
 export const LIST_TECH_MASTERED: ITechMastered[] = [
     {
-        id: 'reactjs',
+        id: '0',
         name: 'ReactJs',
-        altText: 'chameleon_web',
+        altText: 'react',
         icon: ReactJsIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '1',
+        name: 'Bootstrap',
+        altText: 'bootstrap',
+        icon: BootstrapIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '2',
+        name: 'NextJs',
+        altText: 'next_js',
+        icon: NextJsIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '3',
+        name: 'ReduxJs',
+        altText: 'redux_js',
+        icon: ReduxJsIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '4',
+        name: 'Typescript',
+        altText: 'typescript',
+        icon: TypescriptIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '5',
+        name: 'AngularJs',
+        altText: 'angular_js',
+        icon: AngularJsIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '6',
+        name: 'PHP',
+        altText: 'php',
+        icon: PHPIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '7',
+        name: 'Firebase',
+        altText: 'firebase',
+        icon: FirebaseIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '8',
+        name: 'Cypress',
+        altText: 'cypress',
+        icon: CypressIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '9',
+        name: 'Sentry',
+        altText: 'sentry',
+        icon: SentryIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '10',
+        name: 'Storybook',
+        altText: 'storybook',
+        icon: StoryBookIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '11',
+        name: 'Github',
+        altText: 'github',
+        icon: GithubIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '12',
+        name: 'Gitlab',
+        altText: 'gitlab',
+        icon: GitlabIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '13',
+        name: 'Tailwind',
+        altText: 'tailwind',
+        icon: TailwindIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '14',
+        name: 'SASS',
+        altText: 'SASS',
+        icon: SASSIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '15',
+        name: 'MaterialUI',
+        altText: 'material_ui',
+        icon: MaterialIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '16',
+        name: 'FramerMotion',
+        altText: 'framer_motion',
+        icon: FramerMotionIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '17',
+        name: 'Wordpress',
+        altText: 'wordpress',
+        icon: WordPressIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '18',
+        name: 'Elementor',
+        altText: 'elementor',
+        icon: ElementorIcon
     },
     {
-        id: 'reactjs',
-        name: 'ReactJs',
-        altText: 'chameleon_web',
-        icon: ReactJsIcon
+        id: '19',
+        name: 'Woocomerce',
+        altText: 'woocomerce',
+        icon: WoocommerceIcon
     },
 ]

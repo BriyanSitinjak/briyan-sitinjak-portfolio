@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 
 import Nav from '../Nav';
 import MobileNav from '../MobileNav';
-import BriyanIcon from '../../src/assets/logo_briyan_sitinjak.png';
+import BriyanIcon from '@/src/assets/logo_briyan_sitinjak.png';
 
 const Header = () => {
   return (

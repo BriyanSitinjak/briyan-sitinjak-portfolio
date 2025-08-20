@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 import { links } from '@/src/constant/constant';
-import BriyanIcon from '../../src/assets/logo_briyan_sitinjak.png';
+import BriyanIcon from '@/src/assets/logo_briyan_sitinjak.png';
 
 const MobileNav = () => {
   const pathname = usePathname();

@@ -11,6 +11,9 @@ const Nav = () => {
   return (
     <nav className="flex gap-8">
       {links.map((link, idx) => {
+        if (link.mobileOnly) {
+          return null;
+        }
         return (
           <Link
             href={link.path}

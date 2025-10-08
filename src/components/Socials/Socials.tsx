@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaGithub, FaGitlab, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaGitlab, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 interface ISocials {
   containerStyles: string;
@@ -20,7 +20,11 @@ const Socials: React.FC<ISocials> = ({ containerStyles, iconStytle }) => {
     {
       icons: <FaLinkedin />,
       path: 'https://www.linkedin.com/in/briyan-sitinjak/'
-    }
+    },
+    {
+      icons: <FaMedium />,
+      path: 'https://medium.com/@imanbriyan'
+    },
   ];
   return (
     <div className={containerStyles}>

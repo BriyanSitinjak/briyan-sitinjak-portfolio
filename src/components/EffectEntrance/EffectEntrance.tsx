@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import StairsEffect from '../StairsEffect';
 
-const EfecetEntrance = () => {
+const EffectEntrance = () => {
   const pathname = usePathname();
   return (
     <>
@@ -29,4 +29,4 @@ const EfecetEntrance = () => {
   );
 };
 
-export default EfecetEntrance;
+export default EffectEntrance;

@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Source_Sans_3 } from 'next/font/google';
 
 import './globals.css';
-import Header from '@/components/Header';
+import HeaderWrapper from '@/src/layout/HeaderWrapper';
 import PageTransition from '@/components/PageTransition';
 import EffectEntrance from '@/components/EffectEntrance';
 
-const inter = Inter({
+const sourceSans3 = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  weight: ['200', '300', '400', '500', '600', '700', '900']
 });
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
+      <body className={sourceSans3.className}>
+        <HeaderWrapper />
         <EffectEntrance />
         <PageTransition>{children}</PageTransition>
       </body>

@@ -65,6 +65,12 @@ export const links:ILinks[] = [
         name: 'contact',
         path: '/contact'
     },
+    {
+        name: '🌻❤️🌻',
+        path: '/anesya',
+        mobileOnly: true
+    }
+
 ]
 
 export const HOME_HEADING_INFO: IHomeHeading = {

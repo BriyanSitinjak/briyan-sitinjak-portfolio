@@ -15,7 +15,8 @@ export interface IHomeHeading {
 
 export interface ILinks {
     name: string;
-    path: string
+    path: string;
+    mobileOnly?: boolean;
 }
 
 export interface IStatsData {

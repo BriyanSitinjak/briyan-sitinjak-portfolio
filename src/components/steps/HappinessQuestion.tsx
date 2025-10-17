@@ -27,7 +27,7 @@ const HappinessQuestion = () => {
           Are you happy?
         </h2>
         <p className="text-gray-600 text-lg">
-          Tell me how you're feeling today
+          Tell me how you&apos;re feeling today
         </p>
       </div>
 

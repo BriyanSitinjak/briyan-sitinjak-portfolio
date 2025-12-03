@@ -1,18 +1,8 @@
 import type { Metadata, Viewport } from 'next';
-import { Source_Sans_3 } from 'next/font/google';
-
 import './globals.css';
 import HeaderWrapper from '@/src/layout/HeaderWrapper';
 import PageTransition from '@/components/PageTransition';
 import EffectEntrance from '@/components/EffectEntrance';
-import ErrorBoundary from '@/components/ErrorBoundary';
-
-const sourceSans3 = Source_Sans_3({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '900'],
-  display: 'swap',
-  variable: '--font-source-sans-3',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +20,7 @@ export const metadata: Metadata = {
     'JavaScript Developer',
     'UI/UX Developer'
   ],
-  authors: [{ name: 'Briyan Sitinjak', url: 'https://briyansitinjak.com' }],
+  authors: [{ name: 'Briyan Sitinjak', url: 'https://briyan-sitinjak-portfolio.vercel.app/' }],
   creator: 'Briyan Sitinjak',
   publisher: 'Briyan Sitinjak',
   formatDetection: {
@@ -38,14 +28,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://briyansitinjak.com'),
+  metadataBase: new URL('https://briyan-sitinjak-portfolio.vercel.app/'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://briyansitinjak.com',
+    url: 'https://briyan-sitinjak-portfolio.vercel.app/',
     title: 'Briyan Sitinjak - Frontend Developer & WordPress Developer',
     description: 'Experienced Frontend Developer and WordPress Developer specializing in React, Next.js, TypeScript, and modern web technologies.',
     siteName: 'Briyan Sitinjak Portfolio',
@@ -97,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sourceSans3.variable}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -105,12 +95,13 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#1C1C22" />
       </head>
-      <body className={`${sourceSans3.className} antialiased`}>
-        <ErrorBoundary>
+      <body
+        className="antialiased"
+        style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
+      >
           <HeaderWrapper />
           <EffectEntrance />
           <PageTransition>{children}</PageTransition>
-        </ErrorBoundary>
       </body>
     </html>
   );

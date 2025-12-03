@@ -75,7 +75,7 @@ export const links:ILinks[] = [
 
 export const HOME_HEADING_INFO: IHomeHeading = {
     name: 'Briyan Sitinjak',
-    role: 'Frontend Developer  -  WordPress Developer',
+    role: 'Web Developer',
     headingText: "Hello I'm",
     description:
         "I'm passionate about leveraging cutting-edge tech to bring my ideas to life in projects"

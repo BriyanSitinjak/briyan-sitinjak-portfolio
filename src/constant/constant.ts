@@ -42,7 +42,7 @@ import WordPressIcon from '@/src/assets/icon_wordpress.svg';
 import ElementorIcon from '@/src/assets/icon_elementor.svg';
 import WoocommerceIcon from '@/src/assets/icon_woocommerce.svg';
 
-import { IExperiencesData, IHomeHeading, ILinks, ITechMastered } from './type';
+import { IExperiencesData, IHomeHeading, ILinks, IStatsData, ITechMastered } from './type';
 
 export const links:ILinks[] = [
     {
@@ -360,3 +360,24 @@ export const LIST_TECH_MASTERED: ITechMastered[] = [
         icon: WoocommerceIcon
     },
 ]
+
+export const STATS_DATA: IStatsData[] = [
+    {
+      num: 4,
+      text: 'Years of Experience'
+    },
+    {
+      id: 'project_completed',
+      num: 22,
+      text: 'Projects Completed'
+    },
+    {
+      id: 'tech_mastered',
+      num: 24,
+      text: 'Technologies Mastered'
+    },
+    {
+      num: 1433,
+      text: 'Code Commits'
+    }
+  ];

@@ -4,30 +4,11 @@ import CountUp from 'react-countup';
 import React, { useState } from 'react';
 
 import TechMastered from '../TechMastered';
-import { IStatsData } from '@/src/constant/type';
 import ProjectCompleted from '../ProjectCompleted';
+import { STATS_DATA } from '@/constant/constant';
 
 const Stats = () => {
-  const STATS_DATA: IStatsData[] = [
-    {
-      num: 4,
-      text: 'Years of Experience'
-    },
-    {
-      id: 'project_completed',
-      num: 22,
-      text: 'Projects Completed'
-    },
-    {
-      id: 'tech_mastered',
-      num: 24,
-      text: 'Technologies Mastered'
-    },
-    {
-      num: 1433,
-      text: 'Code Commits'
-    }
-  ];
+  
 
   const [activeCol, setActiveCol] = useState<string>('');
 

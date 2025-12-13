@@ -83,6 +83,13 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
+        name: 'Kaulu Concept',
+        altText: 'kaulu_concept',
+        description: 'Website that showing the portfolio for design interior and some products from Kaulu Concept',
+        img: tradeLinkShopWeb,
+        link: 'https://kauluconcept.com/'
+    },
+    {
         name: 'Trade Link Shop',
         altText: 'trade_link_shop',
         description: 'Website for e-commerce for selling own product. Worked on these use WordPress, Elementor, Woocommerce and Custom CSS. Also integration with Payment Gateway from duitku.com',

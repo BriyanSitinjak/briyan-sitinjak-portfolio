@@ -2,9 +2,6 @@
 
 import CountUp from 'react-countup';
 import React, { useState } from 'react';
-
-import TechMastered from '../TechMastered';
-import ProjectCompleted from '../ProjectCompleted';
 import { STATS_DATA } from '@/constant/constant';
 
 const Stats = () => {
@@ -46,15 +43,6 @@ const Stats = () => {
             );
           })}
         </div>
-      </div>
-      <div className="container flex justify-center h-[48vh] mb-10 mt-4">
-        {activeCol === 'project_completed' ? (
-          <ProjectCompleted />
-        ) : activeCol === 'tech_mastered' ? (
-          <TechMastered />
-        ) : (
-          <p className="mt-16">Click one of the four statuses above</p>
-        )}
       </div>
     </section>
   );

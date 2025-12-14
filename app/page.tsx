@@ -13,7 +13,7 @@ import Socials from '@/components/Socials';
 const HomePage = () => {
   const downloadCV = () => {
     return window.open(
-      'https://drive.google.com/file/d/1jh6yygTzf9ergjtYy38XheeGXAAhgwJg/view?usp=sharing'
+      'https://drive.google.com/file/d/1BPZ2Q64nGw6ZCqhv8bmam6IkKlIseQip/view?usp=sharing'
     );
   };
 

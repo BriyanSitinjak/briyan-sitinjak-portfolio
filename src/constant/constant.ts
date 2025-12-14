@@ -20,6 +20,9 @@ import ruhamaAlexandriaWeb from '@/src/assets/ruhama_alexandria_web.png';
 import indoMenaraDigitalWeb from '@/src/assets/indo_menara_dgitial_web.png';
 import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.png';
 import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png';
+import kauluConceptWeb from '@/src/assets/kaulu_concept_web.png';
+import manaShaktiWeb from '@/src/assets/manashakti_web.png';
+import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -83,11 +86,39 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
+        name: 'Manashakti',
+        altText: 'manashakti_web',
+        description: 'Application for communcation with AI assistant using React Native, Expo, Supabase and ElevenLabs',
+        img: manaShaktiWeb,
+        link: 'https://manashakti.xyz/'
+    },
+    {
+        name: 'Ranah Karya',
+        altText: 'ranah_karya',
+        description: 'Website for portfolio that has been developed using NextJs, Chakra UI, and TailwindCSS',
+        img: tradeLinkShopWeb,
+        link: 'https://ranahkarya.com/'
+    },
+    {
+        name: 'Fairpax',
+        altText: 'fairpax_web',
+        description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using radjaongkir',
+        img: tradeLinkShopWeb,
+        link: 'https://manashakti.xyz/'
+    },
+    {
         name: 'Kaulu Concept',
         altText: 'kaulu_concept',
         description: 'Website that showing the portfolio for design interior and some products from Kaulu Concept',
-        img: tradeLinkShopWeb,
+        img: kauluConceptWeb,
         link: 'https://kauluconcept.com/'
+    },
+    {
+        name: 'Kingdom Technology',
+        altText: 'kingdom_technology',
+        description: 'Website for portfolio that showing the automation AI services that has been created using Framer (without motion hehehe)',
+        img: kingdomTechnologyWeb,
+        link: 'https://www.kingdomtech.life/'
     },
     {
         name: 'Trade Link Shop',
@@ -371,11 +402,11 @@ export const LIST_TECH_MASTERED: ITechMastered[] = [
 export const STATS_DATA: IStatsData[] = [
     {
       num: 4,
-      text: 'Years of Experience'
+      text: 'Years of Experiences'
     },
     {
       id: 'project_completed',
-      num: 22,
+      num: 27,
       text: 'Projects Completed'
     },
     {
@@ -384,7 +415,7 @@ export const STATS_DATA: IStatsData[] = [
       text: 'Technologies Mastered'
     },
     {
-      num: 1433,
+      num: 1857,
       text: 'Code Commits'
     }
   ];

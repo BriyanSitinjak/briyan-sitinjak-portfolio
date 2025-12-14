@@ -1,22 +1,12 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { LIST_EXPERIENCES } from '@/src/constant/constant';
 import { IExperiencesData } from '@/src/constant/type';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
+interface ProjectCardProps {
+  project: IExperiencesData;
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -30,19 +20,7 @@ const itemVariants = {
   },
 };
 
-const titleVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.01, 0.99],
-    },
-  },
-};
-
-const ProjectCard: React.FC<{ project: IExperiencesData }> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const handleClick = () => {
     if (project.link) {
       window.open(project.link, '_blank', 'noopener,noreferrer');
@@ -99,63 +77,5 @@ const ProjectCard: React.FC<{ project: IExperiencesData }> = ({ project }) => {
   );
 };
 
-const Work = () => {
-  return (
-    <main className="min-h-screen py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <motion.div
-          variants={titleVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-8 sm:mb-12 md:mb-16 text-center"
-        >
-          <motion.h1
-            className="h1 mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            My <span className="text-accent">Work</span>
-          </motion.h1>
-          <motion.p
-            className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            A collection of projects I&apos;ve worked on, showcasing my expertise in web
-            development and modern technologies.
-          </motion.p>
-        </motion.div>
+export default ProjectCard;
 
-        {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-        >
-          {LIST_EXPERIENCES.map((project, index) => (
-            <ProjectCard key={`${project.name}-${index}`} project={project} />
-          ))}
-        </motion.div>
-
-        {/* Footer Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 sm:mt-16 md:mt-20 text-center"
-        >
-          <p className="text-sm sm:text-base text-white/50">
-            Showing <span className="text-accent font-semibold">{LIST_EXPERIENCES.length}</span>{' '}
-            projects
-          </p>
-        </motion.div>
-      </div>
-    </main>
-  );
-};
-
-export default Work;

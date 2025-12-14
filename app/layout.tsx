@@ -3,6 +3,7 @@ import './globals.css';
 import HeaderWrapper from '@/src/layout/HeaderWrapper';
 import PageTransition from '@/components/PageTransition';
 import EffectEntrance from '@/components/EffectEntrance';
+import { EntranceProvider } from '@/src/context/EntranceContext';
 
 export const metadata: Metadata = {
   title: {
@@ -99,9 +100,11 @@ export default function RootLayout({
         className="antialiased"
         style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
       >
-          <HeaderWrapper />
-          <EffectEntrance />
-          <PageTransition>{children}</PageTransition>
+          <EntranceProvider>
+            <HeaderWrapper />
+            <EffectEntrance />
+            <PageTransition>{children}</PageTransition>
+          </EntranceProvider>
       </body>
     </html>
   );

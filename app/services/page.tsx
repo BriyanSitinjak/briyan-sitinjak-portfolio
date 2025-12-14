@@ -1,14 +1,7 @@
-import React from 'react';
+import ServicesSection from '@/src/components/Services';
 
 const Services = () => {
-  return (
-    <div className='container h-full'>
-      <main className='mx-4'>
-        <h1 className="font-semibold text-5xl text-center mt-64 px-4">SERVICES</h1>
-
-      </main>
-    </div>
-  );
+  return <ServicesSection />;
 };
 
 export default Services;

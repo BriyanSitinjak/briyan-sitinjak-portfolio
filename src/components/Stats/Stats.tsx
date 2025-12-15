@@ -5,8 +5,6 @@ import React, { useState } from 'react';
 import { STATS_DATA } from '@/constant/constant';
 
 const Stats = () => {
-  
-
   const [activeCol, setActiveCol] = useState<string>('');
 
   const goToSection = (link: string) => {

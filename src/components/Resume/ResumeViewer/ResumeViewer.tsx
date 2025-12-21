@@ -11,10 +11,6 @@ const ResumeViewer: React.FC = () => {
     window.open(CV_URL, '_blank', 'noopener,noreferrer');
   };
 
-  const handleView = () => {
-    window.open(CV_URL, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,7 +42,7 @@ const ResumeViewer: React.FC = () => {
               variant="outline"
               size="lg"
               className="flex items-center gap-2 min-w-[200px]"
-              onClick={handleView}
+              onClick={handleDownload}
             >
               <FiExternalLink className="text-xl" />
               <span>View CV</span>

@@ -23,6 +23,9 @@ import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png'
 import kauluConceptWeb from '@/src/assets/kaulu_concept_web.png';
 import manaShaktiWeb from '@/src/assets/manashakti_web.png';
 import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
+import manashaktiApps from '@/src/assets/manashakti_apps.png';
+import figmaManashakti from '@/src/assets/figma_manashakti.png';
+import ranahKaryaWeb from '@/src/assets/ranah_karya.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -90,23 +93,37 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Manashakti',
         altText: 'manashakti_web',
-        description: 'Application for communcation with AI assistant using React Native, Expo, Supabase and ElevenLabs',
+        description: 'Website for registration waiting list of Manashakti Apps',
         img: manaShaktiWeb,
         link: 'https://manashakti.xyz/'
+    },
+    {
+        name: 'Manashakti Apps',
+        altText: 'manashakti_web',
+        description: 'Application for communcation with AI assistant using React Native, Expo, Supabase and ElevenLabs',
+        img: manashaktiApps,
+        link: '/'
+    },
+    {
+        name: 'Figma of Manashakti',
+        altText: 'figma_manashakti',
+        description: 'Figma Design for Manashakti Apps',
+        img: figmaManashakti,
+        link: '/'
     },
     {
         name: 'Ranah Karya',
         altText: 'ranah_karya',
         description: 'Website for portfolio that has been developed using NextJs, Chakra UI, and TailwindCSS',
-        img: tradeLinkShopWeb,
+        img: ranahKaryaWeb,
         link: 'https://ranahkarya.com/'
     },
     {
         name: 'Fairpax',
         altText: 'fairpax_web',
         description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using radjaongkir',
-        img: tradeLinkShopWeb,
-        link: 'https://manashakti.xyz/'
+        img: kauluConceptWeb,
+        link: 'https://fairpaxindonesia.com/'
     },
     {
         name: 'Kaulu Concept',

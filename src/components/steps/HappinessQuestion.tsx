@@ -23,7 +23,7 @@ const HappinessQuestion = () => {
       {/* Animated Header */}
       <div className="text-center space-y-4">
         <div className="text-7xl mb-6 animate-bounce">😊</div>
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold bg-blue-500 bg-clip-text text-transparent">
           Are you happy?
         </h2>
         <p className="text-gray-600 text-lg">

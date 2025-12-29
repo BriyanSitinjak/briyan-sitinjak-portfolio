@@ -11,7 +11,6 @@ const HappinessQuestion = () => {
     setSelectedAnswer(answer);
     setIsAnswered(true);
     
-    // Add a small delay for better UX
     setTimeout(() => {
       updateUserData({ happinessAnswer: answer });
       goToWelcome();

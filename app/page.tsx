@@ -53,6 +53,9 @@ const HomePage = () => {
       <div className="container">
         <Stats />
       </div>
+      <div>
+
+      </div>
     </section>
   );
 };

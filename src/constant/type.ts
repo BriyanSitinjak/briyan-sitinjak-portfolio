@@ -31,3 +31,22 @@ export interface ITechMastered {
     altText:string;
     icon: any;
 }
+
+export type MetadataMediaItem = {
+    cacheControl: string;
+    contentLength: number;
+    eTag : string;
+    httpStatusCode: number;
+    lastModified: string;
+    mimetype: string;
+    size: number;
+}
+
+export type MediaItem = {
+    created_at: string;
+    id: string;
+    last_accessed_at: string;
+    metadata: MetadataMediaItem;
+    name: string;
+    updated_at: string;
+}

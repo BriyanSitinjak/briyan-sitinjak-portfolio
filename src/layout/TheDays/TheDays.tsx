@@ -1,9 +1,6 @@
 'use client'
 import React, { useEffect } from 'react';
-import { StepProvider } from '../../context/StepContext';
-import StepContainer from '../../components/steps/StepContainer';
 import { supabase } from '@/lib/supabase';
-import { motion } from 'framer-motion';
 
 
 const TheDays = () => {

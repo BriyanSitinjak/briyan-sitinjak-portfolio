@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase';
 const TheDays = () => {
 
   const getPhotos = async () => {
-    const { data, error } = await supabase
+    const { data } = await supabase
       .storage
       .from("birthday-memories")
       .list("photos", {

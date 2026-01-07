@@ -26,10 +26,6 @@ const TheDays = () => {
     <div>
       <h1>The Days</h1>
     </div>
-    // <StepProvider>
-    //   <StepContainer />
-    // </StepProvider>
-  );
 };
 
 export default TheDays;

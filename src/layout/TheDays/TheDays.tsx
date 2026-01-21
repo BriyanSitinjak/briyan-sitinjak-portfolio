@@ -18,9 +18,9 @@ const TheDays = () => {
     return data;
   }
 
-  useEffect(() => {
-    getPhotos();
-  }, []);
+  // useEffect(() => {
+  //   getPhotos();
+  // }, []);
 
   return (
     <div>

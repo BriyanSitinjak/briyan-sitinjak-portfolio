@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 
 
@@ -18,9 +18,9 @@ const TheDays = () => {
     return data;
   }
 
-  // useEffect(() => {
-  //   getPhotos();
-  // }, []);
+  useEffect(() => {
+    getPhotos();
+  }, []);
 
   return (
     <div>

@@ -4,7 +4,7 @@ import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
 
-import { HOME_HEADING_INFO } from '@/src/constant/constant';
+import { CV_URL, HOME_HEADING_INFO } from '@/src/constant/constant';
 
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
@@ -12,9 +12,7 @@ import Socials from '@/components/Socials';
 
 const HomePage = () => {
   const downloadCV = () => {
-    return window.open(
-      'https://drive.google.com/file/d/1BPZ2Q64nGw6ZCqhv8bmam6IkKlIseQip/view?usp=sharing'
-    );
+    return window.open(CV_URL);
   };
 
   return (

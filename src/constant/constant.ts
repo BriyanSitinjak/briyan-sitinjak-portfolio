@@ -50,7 +50,7 @@ import WoocommerceIcon from '@/src/assets/icon_woocommerce.svg';
 
 import { IExperiencesData, IHomeHeading, ILinks, IStatsData, ITechMastered } from './type';
 
-export const CV_URL = 'https://drive.google.com/file/d/1BPZ2Q64nGw6ZCqhv8bmam6IkKlIseQip/view?usp=sharing';
+export const CV_URL = 'https://drive.google.com/file/d/1p2HRaTQWPnSWhvuEU7enErDbbmCz9_iv/view?usp=sharing';
 
 export const links:ILinks[] = [
     {

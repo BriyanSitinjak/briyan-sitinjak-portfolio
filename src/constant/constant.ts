@@ -21,6 +21,7 @@ import indoMenaraDigitalWeb from '@/src/assets/indo_menara_dgitial_web.png';
 import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.png';
 import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png';
 import kauluConceptWeb from '@/src/assets/kaulu_concept_web.png';
+import fairPaxIndonesiaWeb from '@/src/assets/fairpax_indonesia_web.png';
 import manaShaktiWeb from '@/src/assets/manashakti_web.png';
 import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
 import manashaktiApps from '@/src/assets/manashakti_apps.png';
@@ -31,6 +32,7 @@ import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
 import NextJsIcon from '@/src/assets/icon_nextjs.svg';
 import ReduxJsIcon from '@/src/assets/icon_redux.svg';
+import ReactQueryIcon from '@/src/assets/icon_react_query.svg';
 import TypescriptIcon from '@/src/assets/icon_typescript.svg';
 import AngularJsIcon from '@/src/assets/icon_angularjs.svg';
 import PHPIcon from '@/src/assets/icon_php.svg';
@@ -47,10 +49,16 @@ import FramerMotionIcon from '@/src/assets/icon_framer_motion.svg';
 import WordPressIcon from '@/src/assets/icon_wordpress.svg';
 import ElementorIcon from '@/src/assets/icon_elementor.svg';
 import WoocommerceIcon from '@/src/assets/icon_woocommerce.svg';
+import ExpressJsIcon from '@/src/assets/icon_expressjs.svg';
+import NodeJsIcon from '@/src/assets/icon_nodejs.svg';
+import MongoDbIcon from '@/src/assets/icon_mongodb.svg'
+import TrelloIcon from '@/src/assets/icon_trello.svg'
+import JiraIcon from '@/src/assets/icon_jira.svg'
+import SSMSIcon from '@/src/assets/icon_ssms.svg'
 
 import { IExperiencesData, IHomeHeading, ILinks, IStatsData, ITechMastered } from './type';
 
-export const CV_URL = 'https://drive.google.com/file/d/1p2HRaTQWPnSWhvuEU7enErDbbmCz9_iv/view?usp=sharing';
+export const CV_URL = 'https://drive.google.com/file/d/16JCFoqtsUol3v6RemHtfjLOgh3jIxfWF/view?usp=sharing';
 
 export const links:ILinks[] = [
     {
@@ -122,7 +130,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
         name: 'Fairpax',
         altText: 'fairpaxindonesia',
         description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using rajaongkir',
-        img: kauluConceptWeb,
+        img: fairPaxIndonesiaWeb,
         link: 'https://fairpaxindonesia.com/'
     },
     {
@@ -415,6 +423,48 @@ export const LIST_TECH_MASTERED: ITechMastered[] = [
         name: 'Woocomerce',
         altText: 'woocomerce',
         icon: WoocommerceIcon
+    },
+    {
+        id: '20',
+        name: 'React Query',
+        altText: 'react_query',
+        icon: ReactQueryIcon
+    },
+    {
+        id: '21',
+        name: 'ExpressJs',
+        altText: 'express_js',
+        icon: ExpressJsIcon
+    },
+    {
+        id: '22',
+        name: 'NodeJs',
+        altText: 'node_js',
+        icon: NodeJsIcon
+    },
+    {
+        id: '23',
+        name: 'MongoDb',
+        altText: 'mongodb',
+        icon: MongoDbIcon
+    },
+    {
+        id: '24',
+        name: 'Trello',
+        altText: 'trello',
+        icon: TrelloIcon
+    },
+    {
+        id: '25',
+        name: 'Jira',
+        altText: 'jira',
+        icon: JiraIcon
+    },
+    {
+        id: '26',
+        name: 'Microsoft SQL Server',
+        altText: 'ssms',
+        icon: SSMSIcon
     },
 ]
 

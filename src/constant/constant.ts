@@ -127,7 +127,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
         link: 'https://ranahkarya.com/'
     },
     {
-        name: 'Fairpax',
+        name: 'FairPax Indonesia',
         altText: 'fairpaxindonesia',
         description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using rajaongkir',
         img: fairPaxIndonesiaWeb,

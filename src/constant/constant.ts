@@ -103,203 +103,232 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
         altText: 'manashakti_web',
         description: 'Website for registration waiting list of Manashakti Apps',
         img: manaShaktiWeb,
-        link: 'https://manashakti.xyz/'
+        link: 'https://manashakti.xyz/',
+        status: 'active'
     },
     {
         name: 'Manashakti Apps',
         altText: 'manashakti_web',
         description: 'Application for communcation with AI assistant using React Native, Expo, Supabase and ElevenLabs',
         img: manashaktiApps,
-        link: '/'
+        link: '/',
+        status: 'active'
     },
     {
         name: 'Figma of Manashakti',
         altText: 'figma_manashakti',
         description: 'Figma Design for Manashakti Apps',
         img: figmaManashakti,
-        link: '/'
+        link: '/',
+        status: 'active'
     },
     {
         name: 'Ranah Karya',
         altText: 'ranah_karya',
         description: 'Website for portfolio that has been developed using NextJs, Chakra UI, and TailwindCSS',
         img: ranahKaryaWeb,
-        link: 'https://ranahkarya.com/'
+        link: 'https://ranahkarya.com/',
+        status: 'active'
     },
     {
         name: 'FairPax Indonesia',
         altText: 'fairpaxindonesia',
         description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using rajaongkir',
         img: fairPaxIndonesiaWeb,
-        link: 'https://fairpaxindonesia.com/'
+        link: 'https://fairpaxindonesia.com/',
+        status: 'active'
     },
     {
         name: 'Kaulu Concept',
         altText: 'kaulu_concept',
         description: 'Website that showing the portfolio for design interior and some products from Kaulu Concept',
         img: kauluConceptWeb,
-        link: 'https://kauluconcept.com/'
+        link: 'https://kauluconcept.com/',
+        status: 'active'
     },
     {
         name: 'Kingdom Technology',
         altText: 'kingdom_technology',
         description: 'Website for portfolio that showing the automation AI services that has been created using Framer (without motion hehehe)',
         img: kingdomTechnologyWeb,
-        link: 'https://www.kingdomtech.life/'
+        link: 'https://www.kingdomtech.life/',
+        status: 'inactive'
     },
     {
         name: 'Trade Link Shop',
         altText: 'trade_link_shop',
         description: 'Website for e-commerce for selling own product. Worked on these use WordPress, Elementor, Woocommerce and Custom CSS. Also integration with Payment Gateway from duitku.com',
         img: tradeLinkShopWeb,
-        link: 'https://indo.tradelinkshop.com/'
+        link: 'https://indo.tradelinkshop.com/',
+        status: 'active'
     },
     {
         name: 'Portal HRMS',
         altText: 'hrms_web',
         description: 'The portal manage employee and employeer. Developed using NextJs, Typescript, Material UI, Material React Table, React Query, useContext, yupValidation React Hook Form and useContext. This is still on development mode.',
         img: hrmsWeb,
-        link: 'https://accel.id/'
+        link: 'https://accel.id/',
+        status: 'maintenance'
     },
     {
         name: 'Vela Aero',
         altText: 'vela_aero_web',
         description: 'Website for portfolio of air mobility, one of the innovation for transportation Worked on these use WordPress, Elementor, and Custom Javascript and CSS',
         img: velaAeroWeb,
-        link: 'https://velaaero.com/'
+        link: 'https://velaaero.com/',
+        status: 'active'
     },
     {
         name: 'Portal Kampus',
         altText: 'portal_kampus_web',
         description: 'The portal for campus to collect their data in one portal. Developed using NextJs, Typescript, Material UI, Material React Table, React Query, useContext, yupValidation React Hook Form and useContext. This is still on development mode.',
         img: portalKampusWeb,
-        link: 'https://vpn.vertical.id/login'
+        link: 'https://vpn.vertical.id/login',
+        status: 'maintenance'
     },
     {
         name: 'Portal Kerja',
         altText: 'portal_kerja_web',
         description: 'The portal for job seekers to find the best jobs depends on your skill and experience. Developed using React.js , Typescript, Redux and SASS. This is still on development mode.',
         img: portalKerjaWeb,
-        link: 'https://portalkerja.co.id/'
+        link: 'https://portalkerja.co.id/',
+        status: 'maintenance'
     },
     {
         name: 'Portal Sekolah',
         altText: 'portal_sekolah_web',
         description: 'School Management System (SMS), Learning Management System (LMS) that has been developed with React.Js, Redux and SASS. I am the PIC for Dashboard view and the feature of Announcement. Dummy Account username: jjdumjo.briyan password: portal267',
         img: portalSekolahWeb,
-        link: 'https://portalsekolah.co.id/'
+        link: 'https://portalsekolah.co.id/',
+        status: 'active'
     },
     {
         name: 'Camy',
         altText: 'camy_web',
         description: 'Website for develop your new skill using video and quizzes after the lessons. Developed using Next.Js, Typescript, MaterialUI and SASS',
         img: camyWeb,
-        link: 'https://camy.id/'
+        link: 'https://camy.id/',
+        status: 'active'
     },
     {
         name: 'Timur Project',
         altText: 'timur_project_web',
         description: 'Website Portfolio for showing the greatness view of East Indonesia. Worked on this use NextJs, Tailwind, and Vercel for the temporary deployment And also connect with Hostinger',
         img: timurProjectWeb,
-        link: 'https://timur-project.vercel.app/'
+        link: 'https://timur-project.vercel.app/',
+        status: 'inactive'
     },
     {
         name: 'Kompek FEB UI',
         altText: 'kompek_feb_ui_web',
         description: 'Website as information and event registration for the Faculty of Economics and Business, University of Indonesia. Developed using WordPress and Elementor. Also using GoogleAPI for the automatic email confirmation through WPMail',
         img: kompekFEBUIWeb,
-        link: 'https://kompekfebui.com/'
+        link: 'https://kompekfebui.com/',
+        status: 'active'
     },
     {
         name: 'Indo Menara Digital',
         altText: 'indo_menara_digital_web',
         description: 'Website of Digital Agency that shows the information about the services provided. Developed using WordPress only with Elementor and Slider Revolutions',
         img: indoMenaraDigitalWeb,
-        link: 'https://www.menaradigital.com/'
+        link: 'https://www.menaradigital.com/',
+        status: 'active'
     },
     {
         name: 'Onyx Tailors',
         altText: 'onyx_tailors_web',
         description: 'Sales of products in the form of elegant clothing with the best materials. Developed using WordPress and plugin for create your own clothes',
         img: onyxTailorsWeb,
-        link: 'https://onyxtailors.com/'
+        link: 'https://onyxtailors.com/',
+        status: 'inactive'
     },
     {
         name: 'Golkar Institue',
         altText: 'golkar_institute_web',
         description: 'Website for registration and explanation of training from Golkar. Developed using WordPress and plugin for handling Learning Management System (LMS)',
         img: golkarInstituteWeb,
-        link: 'https://golkarinstitute.org/'
+        link: 'https://golkarinstitute.org/',
+        status: 'inactive'
     },
     {
         name: 'TEP',
         altText: 'tep_web',
         description: 'Website holding group for 11 company. Made in dual languages containing information related to the TEP Group. Developed using WordPress and Mega Menu Plugin',
         img: tepWeb,
-        link: 'http://www.tep.co.id/en/'
+        link: 'http://www.tep.co.id/en/',
+        status: 'inactive'
     },
     {
         name: 'Indonesia Health Pass',
         altText: 'indonesia_health_pass',
         description: 'Website as profile in introducing Indonesia Health Pass. The system is linked to the core web of World Health Passport Developed using WordPress',
         img: indonsiaHealthPassWeb,
-        link: ''
+        link: '',
+        status: 'inactive'
     },
     {
         name: 'Bersama Dokter',
         altText: 'bersama_dokter_web',
         description: 'Website for registration of swabs and PCR tests, portfolio and also selling the product for against COVID-19. Developed using WordPress',
         img: bersamaDokterWeb,
-        link: ''
+        link: '',
+        status: 'inactive'
     },
     {
         name: 'HIPMI',
         altText: 'hipmi_web',
         description: 'Website as an information viewer, the latest news and info about HIPMI. Developed using WordPress',
         img: hipmiWeb,
-        link: ''
+        link: '',
+        status: 'inactive'
     },
     {
         name: 'Sunset People Project',
         altText: 'sunset_people_project_web',
         description: 'The website as a registrant to take part in events that is integrated with automated response via WhatsApp. Developed using WordPress and API for Automation respon through Whatsapp',
         img: sunsetPeopleProjecteWeb,
-        link: 'http://sunsetpeopleproject.com/'
+        link: 'http://sunsetpeopleproject.com/',
+        status: 'inactive'
     },
     {
         name: 'Sewa Blower Murah',
         altText: 'sewa_blower_murah_web',
         description: 'Website for booking some weeding needs especially in Bekasi, Indonesia. Developed using WordPress and Elementor',
         img: sewaBlowerMurahWeb,
-        link: 'https://sewablowermurah.com/'
+        link: 'https://sewablowermurah.com/',
+        status: 'inactive'
     },
     {
         name: 'Ruhama Alexandria',
         altText: 'ruhama_alexandria_web',
         description: 'Website to provide all of the things for weedding. Developed using WordPress and Elementor',
         img: ruhamaAlexandriaWeb,
-        link: 'http://ruhamaalexandria.com/'
+        link: 'http://ruhamaalexandria.com/',
+        status: 'inactive'
     },
     {
         name: 'Mediatech',
         altText: 'mediatech_web',
         description: 'The e-Commerce platform that has built using the Woodmart theme. The transaction process uses the API Radja Ongkir as a payment',
         img: mediatechWeb,
-        link: 'https://mediatech.co.id/'
+        link: 'https://mediatech.co.id/',
+        status: 'active'
     },
     {
         name: 'Livera',
         altText: 'livera_web',
         description: 'Showing a portfolio of products made by Livera as healthy drink consumption. One of the products from PT. Digital Anak Muda',
         img: liveraWeb,
-        link: 'https://www.product.livera.id/'
+        link: 'https://www.product.livera.id/',
+        status: 'active'
     },
     {
         name: 'Chameleon / Digital Native Agency',
         altText: 'chameleon_web',
         description: 'Displays a portfolio of Digital Native Agency (DNA) or recently called by Chameleon companies as corporate information portals. This has been developed using VueJs and CSS',
         img: chameleonWeb,
-        link: ''
+        link: '',
+        status: 'maintenance'
     },
 ]
 

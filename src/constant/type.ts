@@ -4,6 +4,7 @@ export interface IExperiencesData {
     description: string;
     img: any;
     link: string;
+    status: 'active' | 'maintenance' | 'inactive' | 'coming soon';
 }
 
 export interface IHomeHeading {

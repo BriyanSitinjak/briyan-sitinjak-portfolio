@@ -33,7 +33,7 @@ const MasonaryView = ({ images, onSelect }: MasonaryViewProps) => {
       >
         <motion.img
           // src={img.url}
-          alt=""
+          // alt=""
           loading="lazy"
           style={{
             width: "100%",

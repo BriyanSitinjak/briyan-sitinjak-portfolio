@@ -27,6 +27,7 @@ import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
 import manashaktiApps from '@/src/assets/manashakti_apps.png';
 import figmaManashakti from '@/src/assets/figma_manashakti.png';
 import ranahKaryaWeb from '@/src/assets/ranah_karya.png';
+import figmaMagenta from '@/src/assets/figma_magenta.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -98,6 +99,14 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 };
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
+    {
+        name: 'Figma of Magenta',
+        altText: 'figma_magenta',
+        description: 'Figma Design for Magenta Apps and Magenta CMS Website',
+        img: figmaMagenta,
+        link: '/',
+        status: 'active'
+    },
     {
         name: 'Manashakti',
         altText: 'manashakti_web',

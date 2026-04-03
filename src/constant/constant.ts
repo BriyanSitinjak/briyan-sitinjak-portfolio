@@ -104,7 +104,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
         altText: 'figma_magenta',
         description: 'Figma Design for Magenta Apps and Magenta CMS Website',
         img: figmaMagenta,
-        link: '/',
+        link: 'https://www.figma.com/design/h6CMMpzzsyIKJZf8QClVwu/Magenta?node-id=203-2539&t=1ldf7GZxbKh6Tqf2-1',
         status: 'active'
     },
     {

@@ -28,6 +28,7 @@ import manashaktiApps from '@/src/assets/manashakti_apps.png';
 import figmaManashakti from '@/src/assets/figma_manashakti.png';
 import ranahKaryaWeb from '@/src/assets/ranah_karya.png';
 import figmaMagenta from '@/src/assets/figma_magenta.png';
+import edVissWeb from '@/src/assets/edviss_web.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -100,9 +101,17 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
-        name: 'Figma of Magenta',
-        altText: 'figma_magenta',
-        description: 'Figma Design for Magenta Apps and Magenta CMS Website',
+        name: 'EdViss',
+        altText: 'edviss_web',
+        description: 'Website for education technology that using NextJs, Redux and TailwindCSS',
+        img: edVissWeb,
+        link: 'https://cmsdev.edviss.com',
+        status: 'active'
+    },
+    {
+        name: 'Figma of EdViss',
+        altText: 'figma_edviss',
+        description: 'Figma Design for Edviss Apps and Edviss CMS Website',
         img: figmaMagenta,
         link: 'https://www.figma.com/design/h6CMMpzzsyIKJZf8QClVwu/Magenta?node-id=203-2539&t=1ldf7GZxbKh6Tqf2-1',
         status: 'active'

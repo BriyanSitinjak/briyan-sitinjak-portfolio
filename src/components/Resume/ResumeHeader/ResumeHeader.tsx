@@ -35,7 +35,8 @@ const ResumeHeader: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        View or download my current CV to learn more about my experience and skills.
+        ATS-friendly CV covering frontend engineering, remote internships, and infrastructure
+        leadership—updated June 2026.
       </motion.p>
     </motion.div>
   );

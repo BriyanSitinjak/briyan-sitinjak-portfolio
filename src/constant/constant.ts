@@ -60,7 +60,7 @@ import SSMSIcon from '@/src/assets/icon_ssms.svg'
 
 import { IExperiencesData, IHomeHeading, ILinks, IStatsData, ITechMastered } from './type';
 
-export const CV_URL = 'https://drive.google.com/file/d/16JCFoqtsUol3v6RemHtfjLOgh3jIxfWF/view?usp=sharing';
+export const CV_URL = '/cv-briyan-sitinjak-ats.pdf';
 
 export const links:ILinks[] = [
     {
@@ -93,17 +93,17 @@ export const links:ILinks[] = [
 
 export const HOME_HEADING_INFO: IHomeHeading = {
     name: 'Briyan Sitinjak',
-    role: 'Web Developer',
+    role: 'Frontend Engineer · Remote-Ready',
     headingText: "Hello I'm",
     description:
-        "I'm passionate about leveraging cutting-edge tech to bring my ideas to life in projects"
+        '5+ years building EdTech and production apps with Next.js, TypeScript, and automated testing. Remote experience with UK, Australia, and Germany teams—open to contract, freelance, and full-time roles.'
 };
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'EdViss',
         altText: 'edviss_web',
-        description: 'Website for education technology that using NextJs, Redux and TailwindCSS',
+        description: 'EdTech platform built with Next.js, Redux, and Tailwind CSS—part of the product suite I helped architect at scale.',
         img: edVissWeb,
         link: 'https://cmsdev.edviss.com',
         status: 'active'
@@ -119,7 +119,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Manashakti',
         altText: 'manashakti_web',
-        description: 'Website for registration waiting list of Manashakti Apps',
+        description: 'Registration and waitlist web platform for Manashakti (UK, remote)—integrated ElevenLabs voice AI and Gemini LLM for AI-driven user flows.',
         img: manaShaktiWeb,
         link: 'https://manashakti.xyz/',
         status: 'active'
@@ -127,7 +127,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Manashakti Apps',
         altText: 'manashakti_web',
-        description: 'Application for communcation with AI assistant using React Native, Expo, Supabase and ElevenLabs',
+        description: 'Mobile app for AI-assisted communication—React Native, Expo, Supabase, and ElevenLabs—designed in Figma and built end-to-end without a design handoff gap.',
         img: manashaktiApps,
         link: '/',
         status: 'active'
@@ -167,7 +167,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Kingdom Technology',
         altText: 'kingdom_technology',
-        description: 'Website for portfolio that showing the automation AI services that has been created using Framer (without motion hehehe)',
+        description: 'AI-integrated social platform (Australia, remote internship)—Next.js with Clerk auth, Stripe payments, LiveKit video, Groq/Gemini AI, and N8N automation workflows.',
         img: kingdomTechnologyWeb,
         link: 'https://www.kingdomtech.life/',
         status: 'inactive'
@@ -199,7 +199,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Portal Kampus',
         altText: 'portal_kampus_web',
-        description: 'The portal for campus to collect their data in one portal. Developed using NextJs, Typescript, Material UI, Material React Table, React Query, useContext, yupValidation React Hook Form and useContext. This is still on development mode.',
+        description: 'Campus data portal—Next.js, TypeScript, Material UI, React Query, and React Hook Form—one of three EdTech products architected for thousands of daily active users.',
         img: portalKampusWeb,
         link: 'https://vpn.vertical.id/login',
         status: 'maintenance'
@@ -207,7 +207,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Portal Kerja',
         altText: 'portal_kerja_web',
-        description: 'The portal for job seekers to find the best jobs depends on your skill and experience. Developed using React.js , Typescript, Redux and SASS. This is still on development mode.',
+        description: 'Job-seeker EdTech portal—Next.js, TypeScript, Redux, and SCSS—built as one of three core platforms in a monorepo migration I led from multi-repo JavaScript.',
         img: portalKerjaWeb,
         link: 'https://portalkerja.co.id/',
         status: 'maintenance'
@@ -215,7 +215,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Portal Sekolah',
         altText: 'portal_sekolah_web',
-        description: 'School Management System (SMS), Learning Management System (LMS) that has been developed with React.Js, Redux and SASS. I am the PIC for Dashboard view and the feature of Announcement. Dummy Account username: jjdumjo.briyan password: portal267',
+        description: 'National-scale EdTech SMS/LMS serving thousands of daily active users—Next.js, TypeScript, Redux, and SCSS. Led dashboard UX and the announcements module; introduced Jest and Cypress test coverage.',
         img: portalSekolahWeb,
         link: 'https://portalsekolah.co.id/',
         status: 'active'
@@ -247,7 +247,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Indo Menara Digital',
         altText: 'indo_menara_digital_web',
-        description: 'Website of Digital Agency that shows the information about the services provided. Developed using WordPress only with Elementor and Slider Revolutions',
+        description: 'Digital agency site and client deliverables—WordPress, Elementor, and Vue.js—plus in-house IT hardware and software support during my full-time role (2021).',
         img: indoMenaraDigitalWeb,
         link: 'https://www.menaradigital.com/',
         status: 'active'
@@ -343,7 +343,7 @@ export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Chameleon / Digital Native Agency',
         altText: 'chameleon_web',
-        description: 'Displays a portfolio of Digital Native Agency (DNA) or recently called by Chameleon companies as corporate information portals. This has been developed using VueJs and CSS',
+        description: 'Corporate portfolio site for Chameleon (DNA)—WordPress, Vanilla JS, and Vue.js—delivered on a 4-month contract engagement (2020–2021).',
         img: chameleonWeb,
         link: '',
         status: 'maintenance'
@@ -517,8 +517,8 @@ export const LIST_TECH_MASTERED: ITechMastered[] = [
 
 export const STATS_DATA: IStatsData[] = [
     {
-      num: 4,
-      text: 'Years of Experiences'
+      num: 5,
+      text: 'Years of Experience'
     },
     {
       id: 'project_completed',
@@ -527,7 +527,7 @@ export const STATS_DATA: IStatsData[] = [
     },
     {
       id: 'tech_mastered',
-      num: 24,
+      num: 27,
       text: 'Technologies Mastered'
     },
     {

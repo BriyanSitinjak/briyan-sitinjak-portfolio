@@ -1,48 +1,29 @@
 'use client';
 
 import CountUp from 'react-countup';
-import React, { useState } from 'react';
+import React from 'react';
 import { STATS_DATA } from '@/constant/constant';
 
 const Stats = () => {
-  const [activeCol, setActiveCol] = useState<string>('');
-
-  const goToSection = (link: string) => {
-    return setActiveCol(link);
-  };
-
   return (
-    <section className="py-12 xl:pt-0 xl:pb-0">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none:">
-          {STATS_DATA.map((data, idx) => {
-            return (
-              <div
-                className={`flex-1 flex gap-4 items-center justify-center xl:justify-start ${
-                  data.id && 'hover:bg-accent rounded-lg cursor-pointer'
-                } ${activeCol === data.id && 'bg-accent'}`}
-                key={idx}
-                onClick={() => data.id && goToSection(data.id)}
-              >
-                <CountUp
-                  end={data.num}
-                  duration={5}
-                  delay={2}
-                  className="text-4xl xl:text-6xl font-extrabold px-4 py-2"
-                />
-                <p
-                  className={`${
-                    data.text.length < 15 ? 'max-w-[100px]' : 'max-w-[150px]'
-                  } leading-snug text-white/80`}
-                >
-                  {data.text}
-                </p>
-              </div>
-            );
-          })}
+    <div className="grid grid-cols-2 gap-8 md:gap-10 xl:grid-cols-4 xl:gap-6">
+      {STATS_DATA.map((data, idx) => (
+        <div
+          key={idx}
+          className="flex flex-col items-center gap-2 text-center xl:flex-row xl:items-baseline xl:gap-4 xl:text-left"
+        >
+          <CountUp
+            end={data.num}
+            duration={4}
+            delay={1}
+            className="text-3xl font-extrabold tabular-nums text-white md:text-4xl xl:text-5xl"
+          />
+          <p className="max-w-[9rem] text-sm leading-snug text-white/60 xl:max-w-none xl:text-base">
+            {data.text}
+          </p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

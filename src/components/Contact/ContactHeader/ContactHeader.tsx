@@ -35,8 +35,8 @@ const ContactHeader: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        Connect with me through my social media profiles. I&apos;m always open to discussing new
-        projects and opportunities.
+        Based in Jakarta (GMT+7) and ready to relocate. I respond quickly to remote contract,
+        freelance, and full-time inquiries—reach out via email or LinkedIn.
       </motion.p>
     </motion.div>
   );

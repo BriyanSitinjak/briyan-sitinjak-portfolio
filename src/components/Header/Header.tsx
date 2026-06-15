@@ -10,7 +10,7 @@ import BriyanIcon from '@/src/assets/logo_briyan_sitinjak.png';
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="page-shell flex items-center justify-between">
         {/* Logo */}
         <Link href={'/'}>
           <h1 className="text-4xl font-semibold flex items-center">
@@ -22,8 +22,8 @@ const Header = () => {
         {/* Desktop Nav & Hire Me Button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href={'mailto:Imanbriyan@gmail.com'}>
-            <Button>Hire Me</Button>
+          <Link href={'mailto:Imanbriyan@gmail.com?subject=Remote%20opportunity%20%E2%80%94%20Briyan%20Sitinjak'}>
+            <Button>Work With Me</Button>
           </Link>
         </div>
 

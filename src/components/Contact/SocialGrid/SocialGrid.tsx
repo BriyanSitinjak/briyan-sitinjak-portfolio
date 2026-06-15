@@ -2,49 +2,67 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useEntrance } from '@/src/context/EntranceContext';
+import { FaGithub, FaGitlab, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa';
+import SocialCard from '../SocialCard';
 
-const titleVariants = {
-  hidden: { opacity: 0, y: -20 },
+const SOCIAL_LINKS = [
+  {
+    name: 'Email',
+    url: 'mailto:Imanbriyan@gmail.com?subject=Remote%20opportunity%20%E2%80%94%20Briyan%20Sitinjak',
+    icon: <FaEnvelope />,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/briyan-sitinjak/',
+    icon: <FaLinkedin />,
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/Briyan-NS',
+    icon: <FaGithub />,
+  },
+  {
+    name: 'GitLab',
+    url: 'https://gitlab.com/briyan_sitinjak',
+    icon: <FaGitlab />,
+  },
+  {
+    name: 'Medium',
+    url: 'https://medium.com/@imanbriyan',
+    icon: <FaMedium />,
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
   },
 };
 
-const WorkHeader: React.FC = () => {
-  const { isEntranceComplete } = useEntrance();
-
+const SocialGrid: React.FC = () => {
   return (
     <motion.div
-      variants={titleVariants}
+      variants={containerVariants}
       initial="hidden"
-      animate={isEntranceComplete ? 'visible' : 'hidden'}
-      className="mb-8 sm:mb-12 md:mb-16 text-center"
+      animate="visible"
+      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto"
     >
-      <motion.h1
-        className="h1 mb-4 sm:mb-6"
-        initial={{ opacity: 0, y: -20 }}
-        animate={isEntranceComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-      >
-        My <span className="text-accent">Work</span>
-      </motion.h1>
-      <motion.p
-        className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto"
-        initial={{ opacity: 0, y: -20 }}
-        animate={isEntranceComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        A collection of projects I&apos;ve worked on, showcasing my expertise in web
-        development and modern technologies.
-      </motion.p>
+      {SOCIAL_LINKS.map((social, index) => (
+        <SocialCard
+          key={social.name}
+          icon={social.icon}
+          name={social.name}
+          url={social.url}
+          index={index}
+        />
+      ))}
     </motion.div>
   );
 };
 
-export default WorkHeader;
+export default SocialGrid;

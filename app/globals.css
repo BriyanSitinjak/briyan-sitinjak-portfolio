@@ -4,19 +4,25 @@
 
 @layer base {
     body {
-        @apply bg-primary text-white leading-loose
+        @apply bg-primary text-white leading-relaxed;
     }
 
     .h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
+        @apply text-[40px] md:text-[52px] xl:text-[64px] leading-[1.12] font-semibold tracking-tight;
     }
 
     .h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold
+        @apply text-[32px] md:text-[40px] xl:text-[48px] leading-[1.12] font-semibold tracking-tight;
     }
 
     .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold
+        @apply text-[20px] xl:text-[24px] leading-[1.2] font-semibold;
+    }
+}
+
+@layer components {
+    .page-shell {
+        @apply container mx-auto w-full px-4 sm:px-6 lg:px-8;
     }
 }
 

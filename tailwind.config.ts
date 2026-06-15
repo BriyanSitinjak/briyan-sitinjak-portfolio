@@ -21,6 +21,9 @@ const config = {
       xl: '1200px',
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+      },
       colors: {
         primary: '#1C1C22',
         accent: { 

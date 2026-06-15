@@ -16,16 +16,19 @@ const HomePage = () => {
   };
 
   return (
-    <section className="xl:h-[60vh] h-full">
-      <div className="container mx-auto h-full mb-8">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">{HOME_HEADING_INFO.headingText} {""} {HOME_HEADING_INFO.name}</span>
-            <h1 className="h1 mb-6">
-              <span className="text-accent">{HOME_HEADING_INFO.role}</span>
-            </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">{HOME_HEADING_INFO.description}</p>
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+    <section className="flex min-h-[calc(100dvh-7rem)] flex-col justify-center py-10 xl:py-16">
+      <div className="page-shell">
+        <div className="grid grid-cols-1 items-center gap-12 xl:grid-cols-2 xl:gap-16">
+          <div className="order-2 text-center xl:order-1 xl:text-left">
+            <p className="mb-3 text-lg text-white/70">
+              {HOME_HEADING_INFO.headingText}{' '}
+              <span className="text-white">{HOME_HEADING_INFO.name}</span>
+            </p>
+            <h1 className="h1 mb-6 text-balance text-accent">{HOME_HEADING_INFO.role}</h1>
+            <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-white/75 xl:mx-0">
+              {HOME_HEADING_INFO.description}
+            </p>
+            <div className="flex flex-col items-center gap-6 sm:flex-row xl:items-start">
               <Button
                 variant="outline"
                 size="lg"
@@ -35,24 +38,20 @@ const HomePage = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div className="mb-8 xl:mb-0">
-                <Socials
-                  containerStyles="flex gap-6"
-                  iconStytle="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
-                />
-              </div>
+              <Socials
+                containerStyles="flex gap-4"
+                iconStytle="w-10 h-10 border border-accent/60 rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:border-accent transition-all duration-300"
+              />
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-8">
+          <div className="order-1 flex justify-center xl:order-2 xl:justify-end">
             <Photo />
           </div>
         </div>
-      </div>
-      <div className="container">
-        <Stats />
-      </div>
-      <div>
 
+        <div className="mt-14 border-t border-white/10 pt-10 xl:mt-20 xl:pt-12">
+          <Stats />
+        </div>
       </div>
     </section>
   );

@@ -124,8 +124,8 @@ const Work = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            A collection of projects I&apos;ve worked on, showcasing my expertise in web
-            development and modern technologies.
+            Selected work across EdTech platforms, AI integrations, e-commerce, and agency
+            sites—highlighting production delivery and remote collaboration.
           </motion.p>
         </motion.div>
 

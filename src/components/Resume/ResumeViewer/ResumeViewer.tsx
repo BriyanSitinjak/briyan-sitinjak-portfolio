@@ -33,7 +33,7 @@ const ResumeViewer: React.FC = () => {
               Curriculum Vitae
             </h2>
             <p className="text-white/70 mb-8">
-              Click the buttons below to view or download my resume
+              View or download my latest ATS CV (PDF)
             </p>
           </motion.div>
 

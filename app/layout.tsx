@@ -1,25 +1,36 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import HeaderWrapper from '@/src/layout/HeaderWrapper';
 import PageTransition from '@/components/PageTransition';
 import EffectEntrance from '@/components/EffectEntrance';
 import { EntranceProvider } from '@/src/context/EntranceContext';
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+});
+
 export const metadata: Metadata = {
   title: {
-    default: 'Briyan Sitinjak - Frontend Developer & WordPress Developer',
+    default: 'Briyan Sitinjak - Frontend Engineer (Remote)',
     template: '%s | Briyan Sitinjak'
   },
-  description: 'Experienced Frontend Developer and WordPress Developer specializing in React, Next.js, TypeScript, and modern web technologies. 4+ years of experience building scalable web applications.',
+  description:
+    'Frontend Engineer with 5+ years building EdTech and production web apps with Next.js, TypeScript, Jest, and Cypress. Remote experience in UK, Australia, and Germany. Open to contract, freelance, and full-time roles.',
   keywords: [
-    'Frontend Developer',
-    'WordPress Developer',
-    'React Developer',
+    'Frontend Engineer',
+    'Remote Frontend Developer',
     'Next.js Developer',
     'TypeScript Developer',
-    'Web Developer',
-    'JavaScript Developer',
-    'UI/UX Developer'
+    'React Developer',
+    'Freelance Web Developer',
+    'Contract Frontend Developer',
+    'EdTech Developer',
+    'Cypress',
+    'Jest',
+    'WordPress Developer',
   ],
   authors: [{ name: 'Briyan Sitinjak', url: 'https://briyan-sitinjak-portfolio.vercel.app/' }],
   creator: 'Briyan Sitinjak',
@@ -37,8 +48,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://briyan-sitinjak-portfolio.vercel.app/',
-    title: 'Briyan Sitinjak - Frontend Developer & WordPress Developer',
-    description: 'Experienced Frontend Developer and WordPress Developer specializing in React, Next.js, TypeScript, and modern web technologies.',
+    title: 'Briyan Sitinjak - Frontend Engineer (Remote)',
+    description:
+      'Frontend Engineer with 5+ years in Next.js, TypeScript, and automated testing. Remote-ready—open to contract, freelance, and full-time opportunities.',
     siteName: 'Briyan Sitinjak Portfolio',
     images: [
       {
@@ -51,8 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Briyan Sitinjak - Frontend Developer & WordPress Developer',
-    description: 'Experienced Frontend Developer and WordPress Developer specializing in React, Next.js, TypeScript, and modern web technologies.',
+    title: 'Briyan Sitinjak - Frontend Engineer (Remote)',
+    description:
+      'Frontend Engineer with 5+ years in Next.js, TypeScript, and automated testing. Remote-ready—open to contract, freelance, and full-time opportunities.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -88,23 +101,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#1C1C22" />
-      </head>
-      <body
-        className="antialiased"
-        style={{ fontFamily: 'Helvetica, Arial, sans-serif' }}
-      >
-          <EntranceProvider>
-            <HeaderWrapper />
-            <EffectEntrance />
-            <PageTransition>{children}</PageTransition>
-          </EntranceProvider>
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col bg-primary font-sans text-white antialiased">
+        <EntranceProvider>
+          <HeaderWrapper />
+          <EffectEntrance />
+          <PageTransition>
+            <main className="flex-1 w-full">{children}</main>
+          </PageTransition>
+        </EntranceProvider>
       </body>
     </html>
   );

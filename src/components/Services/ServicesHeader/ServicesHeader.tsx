@@ -35,8 +35,9 @@ const ServicesHeader: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        A comprehensive collection of technologies and tools I&apos;ve mastered throughout my
-        career, enabling me to build modern and scalable web applications.
+        Stack spanning frontend delivery, quality engineering, and operations—from Next.js and
+        TypeScript to Cypress, Jest, SQL Server, and Docker—aligned with how I work on remote
+        product teams.
       </motion.p>
     </motion.div>
   );

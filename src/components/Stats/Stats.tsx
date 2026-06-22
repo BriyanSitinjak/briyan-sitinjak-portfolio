@@ -2,7 +2,7 @@
 
 import CountUp from 'react-countup';
 import React from 'react';
-import { STATS_DATA } from '@/constant/constant';
+import { STATS_DATA } from '@/src/constant/constant';
 
 const Stats = () => {
   return (

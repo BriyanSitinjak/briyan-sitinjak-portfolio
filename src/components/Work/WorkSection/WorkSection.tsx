@@ -1,21 +1,23 @@
 'use client';
 
 import React from 'react';
-import WorkHeader from '../WorkHeader';
+import PageHeader from '@/src/components/PageHeader';
+import PageShell from '@/src/components/PageShell';
 import WorkGrid from '../WorkGrid';
 import WorkFooter from '../WorkFooter';
 
 const WorkSection: React.FC = () => {
   return (
-    <main className="min-h-screen py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <WorkHeader />
-        <WorkGrid />
-        <WorkFooter />
-      </div>
-    </main>
+    <PageShell>
+      <PageHeader
+        titleBefore="My"
+        titleHighlight="Work"
+        description="Selected work across EdTech platforms, AI integrations, e-commerce, and agency sites—highlighting production delivery and remote collaboration."
+      />
+      <WorkGrid />
+      <WorkFooter />
+    </PageShell>
   );
 };
 
 export default WorkSection;
-

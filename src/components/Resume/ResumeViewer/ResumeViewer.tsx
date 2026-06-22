@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiExternalLink } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
-import { CV_URL } from '@/constant/constant';
+import { CV_URL } from '@/src/constant/constant';
 
 const ResumeViewer: React.FC = () => {
   const handleDownload = () => {

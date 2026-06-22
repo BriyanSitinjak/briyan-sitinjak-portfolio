@@ -25,7 +25,3 @@
         @apply container mx-auto w-full px-4 sm:px-6 lg:px-8;
     }
 }
-
-.testing {
-    border: 2px solid orange !important;
-}

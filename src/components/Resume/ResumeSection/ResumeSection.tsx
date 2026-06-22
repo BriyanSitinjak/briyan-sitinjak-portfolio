@@ -1,19 +1,22 @@
 'use client';
 
 import React from 'react';
-import ResumeHeader from '../ResumeHeader';
+import PageHeader from '@/src/components/PageHeader';
+import PageShell from '@/src/components/PageShell';
 import ResumeViewer from '../ResumeViewer';
 
 const ResumeSection: React.FC = () => {
   return (
-    <main className="min-h-screen py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ResumeHeader />
-        <ResumeViewer />
-      </div>
-    </main>
+    <PageShell>
+      <PageHeader
+        titleBefore="My"
+        titleHighlight="Resume"
+        description="ATS-friendly CV covering frontend engineering, remote internships, and infrastructure leadership—updated June 2026."
+        compact
+      />
+      <ResumeViewer />
+    </PageShell>
   );
 };
 
 export default ResumeSection;
-

@@ -83,11 +83,11 @@ export const links:ILinks[] = [
         name: 'contact',
         path: '/contact'
     },
-    {
-        name: '🌻❤️🌻',
-        path: '/anesya',
-        mobileOnly: true
-    }
+    // {
+    //     name: '🌻❤️🌻',
+    //     path: '/anesya',
+    //     mobileOnly: true
+    // }
 
 ]
 

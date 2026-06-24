@@ -29,6 +29,8 @@ import figmaManashakti from '@/src/assets/figma_manashakti.png';
 import ranahKaryaWeb from '@/src/assets/ranah_karya.png';
 import figmaMagenta from '@/src/assets/figma_magenta.png';
 import edVissWeb from '@/src/assets/edviss_web.png';
+import vinjePartnersWeb from '@/src/assets/vinje_partners_web.png';
+import cmsEdVissWeb from '@/src/assets/cms_edviss_web.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -101,11 +103,27 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
+        name: 'Vinje Partners',
+        altText: 'vinje_partners_web',
+        description: 'Website for Vinje Partners, a company that provides consulting services for businesses.',
+        img: vinjePartnersWeb,
+        link: 'https://vinje-partners-z4b1.vercel.app/',
+        status: 'active'
+    },
+    {
+        name: 'CMS EdViss',
+        altText: 'cms_edviss_web',
+        description: 'CMS for EdViss, a platform for managing content and users.',
+        img: cmsEdVissWeb,
+        link: 'https://cmsdev.edviss.com',
+        status: 'active'
+    },
+    {
         name: 'EdViss',
         altText: 'edviss_web',
         description: 'EdTech platform built with Next.js, Redux, and Tailwind CSS—part of the product suite I helped architect at scale.',
         img: edVissWeb,
-        link: 'https://cmsdev.edviss.com',
+        link: 'https://edviss.com',
         status: 'active'
     },
     {

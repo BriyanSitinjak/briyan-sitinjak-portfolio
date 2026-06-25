@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import HeaderWrapper from '@/src/layout/HeaderWrapper';
+import FooterWrapper from '@/src/layout/FooterWrapper';
 import PageTransition from '@/components/PageTransition';
 import EffectEntrance from '@/components/EffectEntrance';
 import { EntranceProvider } from '@/src/context/EntranceContext';
@@ -109,6 +110,7 @@ export default function RootLayout({
           <PageTransition>
             <main className="flex-1 w-full">{children}</main>
           </PageTransition>
+          <FooterWrapper />
         </EntranceProvider>
       </body>
     </html>

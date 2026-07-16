@@ -1,31 +1,21 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { IExperiencesData } from '@/src/constant/type';
-import ProjectCard from '../ProjectCard';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
+import { IExperiencesData } from '@/src/constant/type';
+import { staggerContainer } from '@/lib/motion';
+import ProjectCard from '../ProjectCard';
 
 interface WorkGridProps {
   projects: IExperiencesData[];
   filterKey: string;
 }
 
-const WorkGrid: React.FC<WorkGridProps> = ({ projects, filterKey }) => {
+const WorkGrid = ({ projects, filterKey }: WorkGridProps) => {
   return (
     <motion.div
       key={filterKey}
-      variants={containerVariants}
+      variants={staggerContainer()}
       initial="hidden"
       animate="visible"
       className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8"

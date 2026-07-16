@@ -3,9 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import HeaderWrapper from '@/src/layout/HeaderWrapper';
 import FooterWrapper from '@/src/layout/FooterWrapper';
-import PageTransition from '@/components/PageTransition';
-import EffectEntrance from '@/components/EffectEntrance';
-import { EntranceProvider } from '@/src/context/EntranceContext';
+import RouteTransition from '@/components/RouteTransition';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -80,9 +78,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 };
 
 export const viewport: Viewport = {
@@ -103,15 +98,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-primary font-sans text-white antialiased">
-        <EntranceProvider>
-          <HeaderWrapper />
-          <EffectEntrance />
-          <PageTransition>
-            <main className="flex-1 w-full">{children}</main>
-          </PageTransition>
-          <FooterWrapper />
-        </EntranceProvider>
+      <body className="flex min-h-[100dvh] flex-col overflow-x-hidden bg-primary font-sans text-white antialiased">
+        <HeaderWrapper />
+        <RouteTransition>
+          <main className="w-full min-w-0">{children}</main>
+        </RouteTransition>
+        <FooterWrapper />
       </body>
     </html>
   );

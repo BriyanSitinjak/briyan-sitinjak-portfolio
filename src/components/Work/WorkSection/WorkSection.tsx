@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+
 import PageHeader from '@/src/components/PageHeader';
 import PageShell from '@/src/components/PageShell';
+import SectionFooter from '@/src/components/SectionFooter';
 import { Button } from '@/components/ui/button';
 import { LIST_EXPERIENCES } from '@/src/constant/constant';
 import WorkGrid from '../WorkGrid';
-import WorkFooter from '../WorkFooter';
 
 type WorkStatusFilter = 'all' | 'active' | 'inactive';
 
@@ -16,7 +17,7 @@ const FILTER_OPTIONS: { value: WorkStatusFilter; label: string }[] = [
   { value: 'inactive', label: 'Inactive' },
 ];
 
-const WorkSection: React.FC = () => {
+const WorkSection = () => {
   const [statusFilter, setStatusFilter] = useState<WorkStatusFilter>('all');
 
   const filteredProjects = useMemo(() => {
@@ -61,7 +62,7 @@ const WorkSection: React.FC = () => {
       </div>
 
       <WorkGrid projects={filteredProjects} filterKey={statusFilter} />
-      <WorkFooter count={filteredProjects.length} />
+      <SectionFooter count={filteredProjects.length} label="projects" />
     </PageShell>
   );
 };

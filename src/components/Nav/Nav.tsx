@@ -1,33 +1,9 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
-import { links } from '@/src/constant/constant';
+import NavLinks from '../NavLinks';
 
 const Nav = () => {
-  const pathname = usePathname();
-  return (
-    <nav className="flex gap-8">
-      {links.map((link, idx) => {
-        if (link.mobileOnly) {
-          return null;
-        }
-        return (
-          <Link
-            href={link.path}
-            key={idx}
-            className={`${
-              link.path === pathname && 'text-accent border-accent border-b-2'
-            } capitalize font-medium hover:text-accent-hover transition-all `}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
-    </nav>
-  );
+  return <NavLinks variant="desktop" />;
 };
 
 export default Nav;

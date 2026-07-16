@@ -4,7 +4,12 @@ export interface IExperiencesData {
     description: string;
     img: any;
     link: string;
-    status: 'active' | 'maintenance' | 'inactive' | 'coming soon';
+    status: 'active' | 'maintenance' | 'inactive';
+}
+
+export interface ISocialLink {
+    name: string;
+    url: string;
 }
 
 export interface IHomeHeading {

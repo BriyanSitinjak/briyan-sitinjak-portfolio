@@ -1,64 +1,48 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaGitlab, FaLinkedin, FaMedium, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+
+import { CONTACT_MAILTO, SOCIAL_LINKS } from '@/src/constant/constant';
+import { staggerContainer } from '@/lib/motion';
+import { SOCIAL_ICONS, type SocialName } from '@/components/Socials/socialIcons';
 import SocialCard from '../SocialCard';
 
-const SOCIAL_LINKS = [
+const CONTACT_LINK_ORDER: SocialName[] = ['LinkedIn', 'GitHub', 'GitLab', 'Medium'];
+
+const CONTACT_LINKS = [
   {
     name: 'Email',
-    url: 'mailto:Imanbriyan@gmail.com?subject=Remote%20opportunity%20%E2%80%94%20Briyan%20Sitinjak',
+    url: CONTACT_MAILTO,
     icon: <FaEnvelope />,
   },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/briyan-sitinjak/',
-    icon: <FaLinkedin />,
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com/Briyan-NS',
-    icon: <FaGithub />,
-  },
-  {
-    name: 'GitLab',
-    url: 'https://gitlab.com/briyan_sitinjak',
-    icon: <FaGitlab />,
-  },
-  {
-    name: 'Medium',
-    url: 'https://medium.com/@imanbriyan',
-    icon: <FaMedium />,
-  },
+  ...CONTACT_LINK_ORDER.flatMap((name) => {
+    const link = SOCIAL_LINKS.find((item) => item.name === name);
+    if (!link) return [];
+    return [
+      {
+        name: link.name,
+        url: link.url,
+        icon: SOCIAL_ICONS[name],
+      },
+    ];
+  }),
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const SocialGrid: React.FC = () => {
+const SocialGrid = () => {
   return (
     <motion.div
-      variants={containerVariants}
+      variants={staggerContainer()}
       initial="hidden"
       animate="visible"
-      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto"
+      className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5"
     >
-      {SOCIAL_LINKS.map((social, index) => (
+      {CONTACT_LINKS.map((social) => (
         <SocialCard
           key={social.name}
           icon={social.icon}
           name={social.name}
           url={social.url}
-          index={index}
         />
       ))}
     </motion.div>

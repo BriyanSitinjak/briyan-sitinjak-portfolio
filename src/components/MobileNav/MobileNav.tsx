@@ -1,46 +1,31 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { CiMenuFries } from 'react-icons/ci';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { CiMenuFries } from 'react-icons/ci';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
-import { links } from '@/src/constant/constant';
-import BriyanIcon from '@/src/assets/logo_briyan_sitinjak.png';
+import BrandLogo from '../BrandLogo';
+import NavLinks from '../NavLinks';
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger className="flex items-center justify-center" aria-label="Open menu">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-32 mb-40 text-center text-2xl flex items-center justify-center">
-          <Link href={'/'}>
-            <h1 className="text-4xl font-semibold">
-              <Image src={BriyanIcon} alt="Briyan Sitinjak Icon" width={100} height={100} />
-              <span className="text-accent ml-4">.</span>
-            </h1>
-          </Link>
+        <div className="mb-40 mt-32 flex items-center justify-center text-center text-2xl">
+          <BrandLogo />
         </div>
-        <nav className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, idx) => {
-            return (
-              <Link
-                href={link.path}
-                key={idx}
-                className={`${
-                  link.path === pathname && 'text-accent border-accent border-b-2'
-                } capitalize font-medium hover:text-accent-hover transition-all `}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </nav>
+        <NavLinks variant="mobile" />
       </SheetContent>
     </Sheet>
   );

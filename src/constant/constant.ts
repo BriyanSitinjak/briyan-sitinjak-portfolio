@@ -1,37 +1,37 @@
-import tepWeb from '@/src/assets/tep_web.png';
-import hrmsWeb from '@/src/assets/hrms_web.png';
-import camyWeb from '@/src/assets/camy_web.png';
-import hipmiWeb from '@/src/assets/hipmi_web.png';
-import liveraWeb from '@/src/assets/livera_web.png';
-import velaAeroWeb from '@/src/assets/vela_aero_web.png';
-import mediatechWeb from '@/src/assets/mediatech_web.png';
-import chameleonWeb from '@/src/assets/chameleon_web.png';
-import onyxTailorsWeb from '@/src/assets/onyx_tailors_web.png';
-import portalKerjaWeb from '@/src/assets/portal_kerja_web.png';
-import kompekFEBUIWeb from '@/src/assets/kompek_feb_ui_web.png';
-import portalKampusWeb from '@/src/assets/portal_kampus_web.png';
-import timurProjectWeb from '@/src/assets/timur_project_web.png';
-import bersamaDokterWeb from '@/src/assets/bersama_dokter_web.png';
-import portalSekolahWeb from '@/src/assets/portal_sekolah_web.png';
-import tradeLinkShopWeb from '@/src/assets/trade_link_shop_web.png';
-import golkarInstituteWeb from '@/src/assets/golkar_institute_web.png';
-import sewaBlowerMurahWeb from '@/src/assets/sewa_blower_murah_web.png';
-import ruhamaAlexandriaWeb from '@/src/assets/ruhama_alexandria_web.png';
-import indoMenaraDigitalWeb from '@/src/assets/indo_menara_dgitial_web.png';
-import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.png';
-import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.png';
-import kauluConceptWeb from '@/src/assets/kaulu_concept_web.png';
-import fairPaxIndonesiaWeb from '@/src/assets/fairpax_indonesia_web.png';
-import manaShaktiWeb from '@/src/assets/manashakti_web.png';
-import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
-import manashaktiApps from '@/src/assets/manashakti_apps.png';
-import figmaManashakti from '@/src/assets/figma_manashakti.png';
-import ranahKaryaWeb from '@/src/assets/ranah_karya_web.png';
-import figmaMagenta from '@/src/assets/figma_magenta.png';
-import edVissWeb from '@/src/assets/edviss_web.png';
-import vinjePartnersWeb from '@/src/assets/vinje_partners_web.png';
-import cmsEdVissWeb from '@/src/assets/cms_edviss_web.png';
-import expensesTrackerWeb from '@/src/assets/expenses_tracker.png';
+import tepWeb from '@/src/assets/tep_web.webp';
+import hrmsWeb from '@/src/assets/hrms_web.webp';
+import camyWeb from '@/src/assets/camy_web.webp';
+import hipmiWeb from '@/src/assets/hipmi_web.webp';
+import liveraWeb from '@/src/assets/livera_web.webp';
+import velaAeroWeb from '@/src/assets/vela_aero_web.webp';
+import mediatechWeb from '@/src/assets/mediatech_web.webp';
+import chameleonWeb from '@/src/assets/chameleon_web.webp';
+import onyxTailorsWeb from '@/src/assets/onyx_tailors_web.webp';
+import portalKerjaWeb from '@/src/assets/portal_kerja_web.webp';
+import kompekFEBUIWeb from '@/src/assets/kompek_feb_ui_web.webp';
+import portalKampusWeb from '@/src/assets/portal_kampus_web.webp';
+import timurProjectWeb from '@/src/assets/timur_project_web.webp';
+import bersamaDokterWeb from '@/src/assets/bersama_dokter_web.webp';
+import portalSekolahWeb from '@/src/assets/portal_sekolah_web.webp';
+import tradeLinkShopWeb from '@/src/assets/trade_link_shop_web.webp';
+import golkarInstituteWeb from '@/src/assets/golkar_institute_web.webp';
+import sewaBlowerMurahWeb from '@/src/assets/sewa_blower_murah_web.webp';
+import ruhamaAlexandriaWeb from '@/src/assets/ruhama_alexandria_web.webp';
+import indoMenaraDigitalWeb from '@/src/assets/indo_menara_dgitial_web.webp';
+import indonsiaHealthPassWeb from '@/src/assets/indonesia_health_pass_web.webp';
+import sunsetPeopleProjecteWeb from '@/src/assets/sunset_people_project_web.webp';
+import kauluConceptWeb from '@/src/assets/kaulu_concept_web.webp';
+import fairPaxIndonesiaWeb from '@/src/assets/fairpax_indonesia_web.webp';
+import manaShaktiWeb from '@/src/assets/manashakti_web.webp';
+import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.webp';
+import manashaktiApps from '@/src/assets/manashakti_apps.webp';
+import figmaManashakti from '@/src/assets/figma_manashakti.webp';
+import ranahKaryaWeb from '@/src/assets/ranah_karya_web.webp';
+import figmaMagenta from '@/src/assets/figma_magenta.webp';
+import edVissWeb from '@/src/assets/edviss_web.webp';
+import vinjePartnersWeb from '@/src/assets/vinje_partners_web.webp';
+import cmsEdVissWeb from '@/src/assets/cms_edviss_web.webp';
+import expensesTrackerWeb from '@/src/assets/expenses_tracker.webp';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -61,9 +61,33 @@ import TrelloIcon from '@/src/assets/icon_trello.svg'
 import JiraIcon from '@/src/assets/icon_jira.svg'
 import SSMSIcon from '@/src/assets/icon_ssms.svg'
 
-import { IExperiencesData, IHomeHeading, ILinks, IStatsData, ITechMastered } from './type';
+import { IExperiencesData, IHomeHeading, ILinks, ISocialLink, IStatsData, ITechMastered } from './type';
 
 export const CV_URL = '/cv-briyan-sitinjak-ats.pdf';
+
+export const CONTACT_EMAIL = 'Imanbriyan@gmail.com';
+
+export const CONTACT_MAILTO =
+  'mailto:Imanbriyan@gmail.com?subject=Remote%20opportunity%20%E2%80%94%20Briyan%20Sitinjak';
+
+export const SOCIAL_LINKS: ISocialLink[] = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/Briyan-NS',
+  },
+  {
+    name: 'GitLab',
+    url: 'https://gitlab.com/briyan_sitinjak',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/briyan-sitinjak/',
+  },
+  {
+    name: 'Medium',
+    url: 'https://medium.com/@imanbriyan',
+  },
+];
 
 export const links:ILinks[] = [
     {

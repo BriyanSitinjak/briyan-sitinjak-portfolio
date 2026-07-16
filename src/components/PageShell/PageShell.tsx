@@ -1,14 +1,14 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 interface PageShellProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const PageShell: React.FC<PageShellProps> = ({ children }) => {
+const PageShell = ({ children }: PageShellProps) => {
   return (
-    <main className="min-h-screen py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="min-h-[100dvh] py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="page-shell">{children}</div>
-    </main>
+    </section>
   );
 };
 

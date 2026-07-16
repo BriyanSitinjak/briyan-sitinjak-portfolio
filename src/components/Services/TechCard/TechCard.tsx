@@ -1,32 +1,22 @@
-import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+
 import { ITechMastered } from '@/src/constant/type';
+import { fadeScaleItem } from '@/lib/motion';
+import { glassCardClassName } from '@/components/ui/glass-card';
 
 interface TechCardProps {
   tech: ITechMastered;
 }
 
-const itemVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.6, -0.05, 0.01, 0.99],
-    },
-  },
-};
-
-const TechCard: React.FC<TechCardProps> = ({ tech }) => {
+const TechCard = ({ tech }: TechCardProps) => {
   return (
     <motion.div
-      variants={itemVariants}
-      whileHover={{ y: -8, scale: 1.05, transition: { duration: 0.3 } }}
-      className="group relative flex flex-col items-center justify-center p-6 sm:p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/50 transition-all duration-300"
+      variants={fadeScaleItem}
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      className={`group relative flex flex-col items-center justify-center p-6 sm:p-8 ${glassCardClassName}`}
     >
-      <div className="relative w-20 h-20 sm:w-24 sm:h-24 mb-4">
+      <div className="relative mb-4 h-20 w-20 sm:h-24 sm:w-24">
         <Image
           src={tech.icon}
           alt={tech.altText}
@@ -35,7 +25,7 @@ const TechCard: React.FC<TechCardProps> = ({ tech }) => {
           sizes="(max-width: 768px) 80px, 96px"
         />
       </div>
-      <h3 className="text-sm sm:text-base font-semibold text-white group-hover:text-accent transition-colors duration-300 text-center">
+      <h3 className="text-center text-sm font-semibold text-white transition-colors duration-300 group-hover:text-accent sm:text-base">
         {tech.name}
       </h3>
     </motion.div>
@@ -43,4 +33,3 @@ const TechCard: React.FC<TechCardProps> = ({ tech }) => {
 };
 
 export default TechCard;
-

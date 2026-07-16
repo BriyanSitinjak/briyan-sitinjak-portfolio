@@ -1,20 +1,16 @@
 'use client';
 
-import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 import { Button } from '@/components/ui/button';
 
-import { CV_URL, HOME_HEADING_INFO } from '@/src/constant/constant';
+import { HOME_HEADING_INFO } from '@/src/constant/constant';
+import { openCV } from '@/lib/cv';
 
 import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 import Socials from '@/components/Socials';
 
 const HomePage = () => {
-  const downloadCV = () => {
-    return window.open(CV_URL);
-  };
-
   return (
     <section className="flex min-h-[calc(100dvh-7rem)] flex-col justify-center py-10 xl:py-16">
       <div className="page-shell">
@@ -33,7 +29,7 @@ const HomePage = () => {
                 variant="outline"
                 size="lg"
                 className="flex items-center gap-2"
-                onClick={() => downloadCV()}
+                onClick={openCV}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />

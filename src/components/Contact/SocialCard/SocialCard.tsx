@@ -1,44 +1,33 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
+
+import { fadeUpItem } from '@/lib/motion';
+import { glassCardClassName } from '@/components/ui/glass-card';
 
 interface SocialCardProps {
-  icon: React.ReactNode;
+  icon: ReactNode;
   name: string;
   url: string;
-  index: number;
 }
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.6, -0.05, 0.01, 0.99],
-    },
-  },
-};
-
-const SocialCard: React.FC<SocialCardProps> = ({ icon, name, url, index }) => {
+const SocialCard = ({ icon, name, url }: SocialCardProps) => {
   return (
     <motion.div
-      variants={itemVariants}
-      whileHover={{ y: -8, scale: 1.05, transition: { duration: 0.3 } }}
+      variants={fadeUpItem}
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className="group"
     >
       <Link
-        key={index}
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/50 transition-all duration-300 h-full"
+        className={`flex h-full flex-col items-center justify-center p-6 sm:p-8 ${glassCardClassName}`}
       >
-        <div className="w-16 h-16 sm:w-20 sm:h-20 mb-4 flex items-center justify-center text-3xl sm:text-4xl text-accent group-hover:scale-110 transition-transform duration-300">
+        <div className="mb-4 flex h-16 w-16 items-center justify-center text-3xl text-accent transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20 sm:text-4xl">
           {icon}
         </div>
-        <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-accent transition-colors duration-300 text-center">
+        <h3 className="text-center text-base font-semibold text-white transition-colors duration-300 group-hover:text-accent sm:text-lg">
           {name}
         </h3>
       </Link>
@@ -47,4 +36,3 @@ const SocialCard: React.FC<SocialCardProps> = ({ icon, name, url, index }) => {
 };
 
 export default SocialCard;
-

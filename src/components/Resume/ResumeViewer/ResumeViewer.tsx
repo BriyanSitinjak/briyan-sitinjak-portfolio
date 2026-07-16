@@ -1,48 +1,43 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiExternalLink } from 'react-icons/fi';
+
 import { Button } from '@/components/ui/button';
-import { CV_URL } from '@/src/constant/constant';
+import { openCV } from '@/lib/cv';
+import { glassCardClassName } from '@/components/ui/glass-card';
 
-const ResumeViewer: React.FC = () => {
-  const handleDownload = () => {
-    window.open(CV_URL, '_blank', 'noopener,noreferrer');
-  };
-
+const ResumeViewer = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className="flex flex-col items-center justify-center min-h-[60vh]"
+      className="flex min-h-[60vh] flex-col items-center justify-center"
     >
-      <div className="w-full max-w-4xl mx-auto">
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 sm:p-12 text-center">
+      <div className="mx-auto w-full max-w-4xl">
+        <div className={`${glassCardClassName} p-8 text-center sm:p-12`}>
           <motion.div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-8"
           >
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-accent/20 flex items-center justify-center">
-              <FiDownload className="w-12 h-12 text-accent" />
+            <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-accent/20">
+              <FiDownload className="h-12 w-12 text-accent" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-white">
+            <h2 className="mb-4 text-2xl font-semibold text-white sm:text-3xl">
               Curriculum Vitae
             </h2>
-            <p className="text-white/70 mb-8">
-              View or download my latest ATS CV (PDF)
-            </p>
+            <p className="mb-8 text-white/70">View or download my latest ATS CV (PDF)</p>
           </motion.div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               variant="outline"
               size="lg"
-              className="flex items-center gap-2 min-w-[200px]"
-              onClick={handleDownload}
+              className="flex min-w-[200px] items-center gap-2"
+              onClick={openCV}
             >
               <FiExternalLink className="text-xl" />
               <span>View CV</span>
@@ -50,8 +45,8 @@ const ResumeViewer: React.FC = () => {
             <Button
               variant="outline"
               size="lg"
-              className="flex items-center gap-2 min-w-[200px]"
-              onClick={handleDownload}
+              className="flex min-w-[200px] items-center gap-2"
+              onClick={openCV}
             >
               <FiDownload className="text-xl" />
               <span>Download CV</span>
@@ -64,4 +59,3 @@ const ResumeViewer: React.FC = () => {
 };
 
 export default ResumeViewer;
-

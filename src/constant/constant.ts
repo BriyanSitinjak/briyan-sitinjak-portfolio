@@ -26,11 +26,12 @@ import manaShaktiWeb from '@/src/assets/manashakti_web.png';
 import kingdomTechnologyWeb from '@/src/assets/kingdom_technology_web.png';
 import manashaktiApps from '@/src/assets/manashakti_apps.png';
 import figmaManashakti from '@/src/assets/figma_manashakti.png';
-import ranahKaryaWeb from '@/src/assets/ranah_karya.png';
+import ranahKaryaWeb from '@/src/assets/ranah_karya_web.png';
 import figmaMagenta from '@/src/assets/figma_magenta.png';
 import edVissWeb from '@/src/assets/edviss_web.png';
 import vinjePartnersWeb from '@/src/assets/vinje_partners_web.png';
 import cmsEdVissWeb from '@/src/assets/cms_edviss_web.png';
+import expensesTrackerWeb from '@/src/assets/expenses_tracker.png';
 
 import ReactJsIcon from '@/src/assets/icon_react.svg';
 import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
@@ -102,6 +103,14 @@ export const HOME_HEADING_INFO: IHomeHeading = {
 };
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
+    {
+        name: 'Expenses Tracker',
+        altText: 'expenses_tracker',
+        description: 'Expenses Tracker built with React Native, Expo, and TypeScript.',
+        img: expensesTrackerWeb,
+        link: 'https://expenses-tracker-briyan.vercel.app/',
+        status: 'active'
+    },
     {
         name: 'Vinje Partners',
         altText: 'vinje_partners_web',

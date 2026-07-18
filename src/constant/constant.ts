@@ -33,35 +33,11 @@ import vinjePartnersWeb from '@/src/assets/vinje_partners_web.webp';
 import cmsEdVissWeb from '@/src/assets/cms_edviss_web.webp';
 import expensesTrackerWeb from '@/src/assets/expenses_tracker.webp';
 
-import ReactJsIcon from '@/src/assets/icon_react.svg';
-import BootstrapIcon from '@/src/assets/icon_bootstrap.svg'
-import NextJsIcon from '@/src/assets/icon_nextjs.svg';
-import ReduxJsIcon from '@/src/assets/icon_redux.svg';
-import ReactQueryIcon from '@/src/assets/icon_react_query.svg';
-import TypescriptIcon from '@/src/assets/icon_typescript.svg';
-import AngularJsIcon from '@/src/assets/icon_angularjs.svg';
-import PHPIcon from '@/src/assets/icon_php.svg';
-import FirebaseIcon from '@/src/assets/icon_firebase.svg';
-import CypressIcon from '@/src/assets/icon_cypress.svg';
-import SentryIcon from '@/src/assets/icon_sentry.svg';
-import StoryBookIcon from '@/src/assets/icon_storybook.svg';
-import GithubIcon from '@/src/assets/icon_github.svg';
-import GitlabIcon from '@/src/assets/icon_gitlab.svg';
-import TailwindIcon from '@/src/assets/icon_tailwindsvg.svg';
-import SASSIcon from '@/src/assets/icon_sass.svg';
-import MaterialIcon from '@/src/assets/icon_material.svg';
-import FramerMotionIcon from '@/src/assets/icon_framer_motion.svg';
-import WordPressIcon from '@/src/assets/icon_wordpress.svg';
-import ElementorIcon from '@/src/assets/icon_elementor.svg';
-import WoocommerceIcon from '@/src/assets/icon_woocommerce.svg';
-import ExpressJsIcon from '@/src/assets/icon_expressjs.svg';
-import NodeJsIcon from '@/src/assets/icon_nodejs.svg';
-import MongoDbIcon from '@/src/assets/icon_mongodb.svg'
-import TrelloIcon from '@/src/assets/icon_trello.svg'
-import JiraIcon from '@/src/assets/icon_jira.svg'
-import SSMSIcon from '@/src/assets/icon_ssms.svg'
+import { IExperiencesData, IHomeHeading, ILinks, ISocialLink, IStatsData } from './type';
+import { SKILLS } from './skills';
 
-import { IExperiencesData, IHomeHeading, ILinks, ISocialLink, IStatsData, ITechMastered } from './type';
+export { SKILLS, SKILL_CATEGORIES, getProjectStack, getSkillById, countProjectsForSkill } from './skills';
+export type { SkillId } from './type';
 
 export const CV_URL = '/cv-briyan-sitinjak-ats.pdf';
 
@@ -123,448 +99,359 @@ export const HOME_HEADING_INFO: IHomeHeading = {
     role: 'Frontend Engineer · Remote-Ready',
     headingText: "Hello I'm",
     description:
-        '5+ years building EdTech and production apps with Next.js, TypeScript, and automated testing. Remote experience with UK, Australia, and Germany teams—open to contract, freelance, and full-time roles.'
+        '5+ years building EdTech and production apps with Next.js, TypeScript, and automated testing. Remote experience with UK, Australia, and Germany teams, open to contract, freelance, and full-time roles.'
 };
 
 export const LIST_EXPERIENCES: IExperiencesData[] = [
     {
         name: 'Expenses Tracker',
         altText: 'expenses_tracker',
-        description: 'Expenses Tracker built with React Native, Expo, and TypeScript.',
+        description:
+            'A mobile app for logging daily spending and seeing where money goes. I built it with React Native, Expo, and TypeScript so it runs on iOS and Android from one codebase. Focused on a clean input flow and clear summaries so people can track habits without friction.',
         img: expensesTrackerWeb,
         link: 'https://expenses-tracker-briyan.vercel.app/',
-        status: 'active'
+        status: 'active',
+        deployment: 'staging'
     },
     {
         name: 'Vinje Partners',
         altText: 'vinje_partners_web',
-        description: 'Website for Vinje Partners, a company that provides consulting services for businesses.',
+        description:
+            'A consulting firm needed a simple site that explains who they are and how they help businesses. I built a fast Next.js marketing site with clear sections for services and contact, then deployed it on Vercel for a temporary public link. The goal was trust and clarity, not clutter.',
         img: vinjePartnersWeb,
         link: 'https://vinje-partners-z4b1.vercel.app/',
-        status: 'active'
+        status: 'active',
+        deployment: 'staging'
     },
     {
         name: 'CMS EdViss',
         altText: 'cms_edviss_web',
-        description: 'CMS for EdViss, a platform for managing content and users.',
+        description:
+            'An internal CMS so the EdViss team can manage content and users without waiting on engineering. I built admin flows for publishing and user roles with Next.js and TypeScript. Made day-to-day content updates faster and safer.',
         img: cmsEdVissWeb,
-        link: 'https://cmsdev.edviss.com',
-        status: 'active'
+        link: 'https://cms.edviss.com',
+        status: 'active',
+        deployment: 'staging'
     },
     {
         name: 'EdViss',
         altText: 'edviss_web',
-        description: 'EdTech platform built with Next.js, Redux, and Tailwind CSS—part of the product suite I helped architect at scale.',
+        description:
+            'EdViss is an EdTech product for learning at scale. I helped shape the frontend with Next.js and Tailwind, and worked on architecture that could grow with the product suite. Aimed at stable delivery for real users, not demos.',
         img: edVissWeb,
         link: 'https://edviss.com',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Figma of EdViss',
         altText: 'figma_edviss',
-        description: 'Figma Design for Edviss Apps and Edviss CMS Website',
+        description:
+            'Design system and screens for EdViss apps and the CMS before build. I structured flows in Figma so engineering and product shared one source of truth. Reduced guesswork between design and implementation.',
         img: figmaMagenta,
         link: 'https://www.figma.com/design/h6CMMpzzsyIKJZf8QClVwu/Magenta?node-id=203-2539&t=1ldf7GZxbKh6Tqf2-1',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Manashakti',
         altText: 'manashakti_web',
-        description: 'Registration and waitlist web platform for Manashakti (UK, remote)—integrated ElevenLabs voice AI and Gemini LLM for AI-driven user flows.',
+        description:
+            'A UK remote project for registration and waitlist. Users needed a guided path, not a blank form. I shipped a simple web experience built with Lovable, focused on clear steps and a clean signup flow.',
         img: manaShaktiWeb,
         link: 'https://manashakti.xyz/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Manashakti Apps',
         altText: 'manashakti_web',
-        description: 'Mobile app for AI-assisted communication—React Native, Expo, Supabase, and ElevenLabs—designed in Figma and built end-to-end without a design handoff gap.',
+        description:
+            'Mobile companion for AI-assisted communication. Built end-to-end with React Native, Expo, Supabase, and ElevenLabs. Owned the full build path from product flow to a working mobile app.',
         img: manashaktiApps,
         link: '/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Figma of Manashakti',
         altText: 'figma_manashakti',
-        description: 'Figma Design for Manashakti Apps',
+        description:
+            'Full UI design for the Manashakti mobile app before development. Mapped screens, states, and voice-led flows in Figma. Gave the build a clear blueprint and kept the product consistent.',
         img: figmaManashakti,
         link: '/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Ranah Karya',
         altText: 'ranah_karya',
-        description: 'Website for portfolio that has been developed using NextJs, Chakra UI, and TailwindCSS',
+        description:
+            'A creative portfolio site for showcasing work online. Built with Next.js and Tailwind so pages stay fast and easy to update. Helped the brand present projects in a clean, modern layout.',
         img: ranahKaryaWeb,
         link: 'https://ranahkarya.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'FairPax Indonesia',
         altText: 'fairpaxindonesia',
-        description: 'Web commerce for selling products using WooCommerce and WordPress and implement the payment gateway and shipping using rajaongkir',
+        description:
+            'An online store that needed checkout and shipping that work in Indonesia. I set up WordPress and WooCommerce, then integrated Midtrans for payments and RajaOngkir for shipping rates. Customers can buy and get delivery estimates in one flow.',
         img: fairPaxIndonesiaWeb,
         link: 'https://fairpaxindonesia.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Kaulu Concept',
         altText: 'kaulu_concept',
-        description: 'Website that showing the portfolio for design interior and some products from Kaulu Concept',
+        description:
+            'Interior design brand that needed a home for their portfolio and products. Built with React and Tailwind, and deployed a temporary link on Vercel. Focused on showing the work first with a fast, clean layout.',
         img: kauluConceptWeb,
         link: 'https://kauluconcept.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'staging'
     },
     {
         name: 'Kingdom Technology',
         altText: 'kingdom_technology',
-        description: 'AI-integrated social platform (Australia, remote internship)—Next.js with Clerk auth, Stripe payments, LiveKit video, Groq/Gemini AI, and N8N automation workflows.',
+        description:
+            'Remote internship with a 4-person Australia-based team building an AI social platform. This was not a public live product. I used the stack in day-to-day work and learning: Next.js, Clerk, Strapi headless, Gemini, and ClickUp for tasks. Focused on how a small team ships AI features in a real codebase.',
         img: kingdomTechnologyWeb,
         link: 'https://www.kingdomtech.life/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Trade Link Shop',
         altText: 'trade_link_shop',
-        description: 'Website for e-commerce for selling own product. Worked on these use WordPress, Elementor, Woocommerce and Custom CSS. Also integration with Payment Gateway from duitku.com',
+        description:
+            'E-commerce site for selling their own products. Built on WordPress, Elementor, and WooCommerce with custom CSS for brand fit. Integrated Duitku as the payment gateway so checkout works for local payments.',
         img: tradeLinkShopWeb,
         link: 'https://indo.tradelinkshop.com/',
-        status: 'active'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Portal HRMS',
         altText: 'hrms_web',
-        description: 'The portal manage employee and employeer. Developed using NextJs, Typescript, Material UI, Material React Table, React Query, useContext, yupValidation React Hook Form and useContext. This is still on development mode.',
+        description:
+            'HR portal for employee and employer data, still evolving in production. Built tables, forms, and data fetching with Next.js, TypeScript, Material UI, Redux, and React Query. Aimed at reliable admin work, not flashy UI.',
         img: hrmsWeb,
         link: 'https://accel.id/',
-        status: 'maintenance'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Vela Aero',
         altText: 'vela_aero_web',
-        description: 'Website for portfolio of air mobility, one of the innovation for transportation Worked on these use WordPress, Elementor, and Custom Javascript and CSS',
+        description:
+            'Air mobility company needed a public site that explains the vision. Built with WordPress and Elementor, plus custom JS/CSS where the theme fell short. Kept the story clear for investors and partners.',
         img: velaAeroWeb,
         link: 'https://velaaero.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Portal Kampus',
         altText: 'portal_kampus_web',
-        description: 'Campus data portal—Next.js, TypeScript, Material UI, React Query, and React Hook Form—one of three EdTech products architected for thousands of daily active users.',
+        description:
+            'Campus data portal used daily by students and staff. Part of a three-product EdTech suite built for thousands of users. I worked on Next.js screens with TypeScript, Material UI, Redux, React Query, and solid form handling.',
         img: portalKampusWeb,
         link: 'https://vpn.vertical.id/login',
-        status: 'maintenance'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Portal Kerja',
         altText: 'portal_kerja_web',
-        description: 'Job-seeker EdTech portal—Next.js, TypeScript, Redux, and SCSS—built as one of three core platforms in a monorepo migration I led from multi-repo JavaScript.',
+        description:
+            'Job-seeker platform inside the same EdTech suite. Built with Next.js, TypeScript, Redux, and SCSS. Also part of a monorepo move I helped lead, from scattered JS repos to one shared frontend setup.',
         img: portalKerjaWeb,
         link: 'https://portalkerja.co.id/',
-        status: 'maintenance'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Portal Sekolah',
         altText: 'portal_sekolah_web',
-        description: 'National-scale EdTech SMS/LMS serving thousands of daily active users—Next.js, TypeScript, Redux, and SCSS. Led dashboard UX and the announcements module; introduced Jest and Cypress test coverage.',
+        description:
+            'National-scale school SMS/LMS with thousands of daily users. Led dashboard UX and the announcements module. Added Jest unit tests and Cypress end-to-end coverage so releases were safer as the product grew.',
         img: portalSekolahWeb,
         link: 'https://portalsekolah.co.id/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Camy',
         altText: 'camy_web',
-        description: 'Website for develop your new skill using video and quizzes after the lessons. Developed using Next.Js, Typescript, MaterialUI and SASS',
+        description:
+            'Learning site with video lessons and quizzes after each module. Built learner-facing UI with Next.js, TypeScript, and Tailwind. Kept progress and content easy to follow.',
         img: camyWeb,
         link: 'https://camy.id/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Timur Project',
         altText: 'timur_project_web',
-        description: 'Website Portfolio for showing the greatness view of East Indonesia. Worked on this use NextJs, Tailwind, and Vercel for the temporary deployment And also connect with Hostinger',
+        description:
+            'Visual portfolio celebrating East Indonesia. Built a light Next.js and Tailwind site, deployed on Vercel, and connected hosting for the client. Made imagery the main story.',
         img: timurProjectWeb,
         link: 'https://timur-project.vercel.app/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'staging'
     },
     {
         name: 'Kompek FEB UI',
         altText: 'kompek_feb_ui_web',
-        description: 'Website as information and event registration for the Faculty of Economics and Business, University of Indonesia. Developed using WordPress and Elementor. Also using GoogleAPI for the automatic email confirmation through WPMail',
+        description:
+            'Event site for FEB UI, info pages plus registration. Built with WordPress and Elementor, and integrated Google API so confirmations send by email automatically. Less manual follow-up for the organizers.',
         img: kompekFEBUIWeb,
         link: 'https://kompekfebui.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Indo Menara Digital',
         altText: 'indo_menara_digital_web',
-        description: 'Digital agency site and client deliverables—WordPress, Elementor, and Vue.js—plus in-house IT hardware and software support during my full-time role (2021).',
+        description:
+            'Agency site and client work during my full-time role in 2021. Delivered WordPress and Elementor projects for the company and clients. Also supported day-to-day IT for the team.',
         img: indoMenaraDigitalWeb,
         link: 'https://www.menaradigital.com/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Onyx Tailors',
         altText: 'onyx_tailors_web',
-        description: 'Sales of products in the form of elegant clothing with the best materials. Developed using WordPress and plugin for create your own clothes',
+        description:
+            'Tailoring brand selling custom clothing online. Set up WordPress with product customization plugins so customers can configure orders. Focused on a smooth path from browse to buy.',
         img: onyxTailorsWeb,
         link: 'https://onyxtailors.com/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Golkar Institue',
         altText: 'golkar_institute_web',
-        description: 'Website for registration and explanation of training from Golkar. Developed using WordPress and plugin for handling Learning Management System (LMS)',
+        description:
+            'Training institute needed registration and course info in one place. Built the site on WordPress with LMS plugins for learning content. Made signup and course discovery straightforward.',
         img: golkarInstituteWeb,
         link: 'https://golkarinstitute.org/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'TEP',
         altText: 'tep_web',
-        description: 'Website holding group for 11 company. Made in dual languages containing information related to the TEP Group. Developed using WordPress and Mega Menu Plugin',
+        description:
+            'Holding group site covering 11 companies in two languages. Structured WordPress with mega menus so visitors can find each company without getting lost. Built for clarity across a large brand family.',
         img: tepWeb,
         link: 'http://www.tep.co.id/en/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Indonesia Health Pass',
         altText: 'indonesia_health_pass',
-        description: 'Website as profile in introducing Indonesia Health Pass. The system is linked to the core web of World Health Passport Developed using WordPress',
+        description:
+            'Public profile site introducing Indonesia Health Pass and linking to the World Health Passport system. Built in WordPress for quick content updates. Kept the message simple for a wide audience.',
         img: indonsiaHealthPassWeb,
         link: '',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Bersama Dokter',
         altText: 'bersama_dokter_web',
-        description: 'Website for registration of swabs and PCR tests, portfolio and also selling the product for against COVID-19. Developed using WordPress',
+        description:
+            'COVID-era site for swab/PCR registration, company info, and related products. Built on WordPress so ops could change content fast. Prioritized clear booking paths under time pressure.',
         img: bersamaDokterWeb,
         link: '',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'HIPMI',
         altText: 'hipmi_web',
-        description: 'Website as an information viewer, the latest news and info about HIPMI. Developed using WordPress',
+        description:
+            'Organization site for news and updates. Built with WordPress so the team can publish without developers. Simple structure so members find the latest info quickly.',
         img: hipmiWeb,
         link: '',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Sunset People Project',
         altText: 'sunset_people_project_web',
-        description: 'The website as a registrant to take part in events that is integrated with automated response via WhatsApp. Developed using WordPress and API for Automation respon through Whatsapp',
+        description:
+            'Event registration that should not leave people waiting for a human reply. Built WordPress forms and basic WhatsApp automation so confirmations go out right after signup. Cut manual follow-up for the organizers.',
         img: sunsetPeopleProjecteWeb,
         link: 'http://sunsetpeopleproject.com/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Sewa Blower Murah',
         altText: 'sewa_blower_murah_web',
-        description: 'Website for booking some weeding needs especially in Bekasi, Indonesia. Developed using WordPress and Elementor',
+        description:
+            'Local wedding rental business in Bekasi needed online booking. Built the site with WordPress and Elementor so they can manage packages and inquiries. Made it easy for customers to request rentals.',
         img: sewaBlowerMurahWeb,
         link: 'https://sewablowermurah.com/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Ruhama Alexandria',
         altText: 'ruhama_alexandria_web',
-        description: 'Website to provide all of the things for weedding. Developed using WordPress and Elementor',
+        description:
+            'Wedding services brand needed a complete online presence. Built service pages and contact flows with WordPress and Elementor. Helped couples find offerings without chasing chat threads.',
         img: ruhamaAlexandriaWeb,
         link: 'http://ruhamaalexandria.com/',
-        status: 'inactive'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
     {
         name: 'Mediatech',
         altText: 'mediatech_web',
-        description: 'The e-Commerce platform that has built using the Woodmart theme. The transaction process uses the API Radja Ongkir as a payment',
+        description:
+            'E-commerce storefront on a Woodmart WordPress theme. Integrated RajaOngkir so shipping costs show during checkout. Goal was a working buy flow, not just a catalog.',
         img: mediatechWeb,
         link: 'https://mediatech.co.id/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Livera',
         altText: 'livera_web',
-        description: 'Showing a portfolio of products made by Livera as healthy drink consumption. One of the products from PT. Digital Anak Muda',
+        description:
+            'Product site for Livera healthy drinks under PT. Digital Anak Muda. Built pages that put products and brand story first. Kept it light so marketing can update content often.',
         img: liveraWeb,
         link: 'https://www.product.livera.id/',
-        status: 'active'
+        status: 'active',
+        deployment: 'production'
     },
     {
         name: 'Chameleon / Digital Native Agency',
         altText: 'chameleon_web',
-        description: 'Corporate portfolio site for Chameleon (DNA)—WordPress, Vanilla JS, and Vue.js—delivered on a 4-month contract engagement (2020–2021).',
+        description:
+            'Corporate site for Chameleon (DNA) on a 4-month contract (2020-2021). Delivered WordPress with custom JS and Vue pieces where needed. Focused on a solid agency portfolio the team could maintain.',
         img: chameleonWeb,
         link: '',
-        status: 'maintenance'
+        status: 'inactive',
+        deployment: 'maintenance'
     },
 ]
 
-export const LIST_TECH_MASTERED: ITechMastered[] = [
-    {
-        id: '0',
-        name: 'ReactJs',
-        altText: 'react',
-        icon: ReactJsIcon
-    },
-    {
-        id: '1',
-        name: 'Bootstrap',
-        altText: 'bootstrap',
-        icon: BootstrapIcon
-    },
-    {
-        id: '2',
-        name: 'NextJs',
-        altText: 'next_js',
-        icon: NextJsIcon
-    },
-    {
-        id: '3',
-        name: 'ReduxJs',
-        altText: 'redux_js',
-        icon: ReduxJsIcon
-    },
-    {
-        id: '4',
-        name: 'Typescript',
-        altText: 'typescript',
-        icon: TypescriptIcon
-    },
-    {
-        id: '5',
-        name: 'AngularJs',
-        altText: 'angular_js',
-        icon: AngularJsIcon
-    },
-    {
-        id: '6',
-        name: 'PHP',
-        altText: 'php',
-        icon: PHPIcon
-    },
-    {
-        id: '7',
-        name: 'Firebase',
-        altText: 'firebase',
-        icon: FirebaseIcon
-    },
-    {
-        id: '8',
-        name: 'Cypress',
-        altText: 'cypress',
-        icon: CypressIcon
-    },
-    {
-        id: '9',
-        name: 'Sentry',
-        altText: 'sentry',
-        icon: SentryIcon
-    },
-    {
-        id: '10',
-        name: 'Storybook',
-        altText: 'storybook',
-        icon: StoryBookIcon
-    },
-    {
-        id: '11',
-        name: 'Github',
-        altText: 'github',
-        icon: GithubIcon
-    },
-    {
-        id: '12',
-        name: 'Gitlab',
-        altText: 'gitlab',
-        icon: GitlabIcon
-    },
-    {
-        id: '13',
-        name: 'Tailwind',
-        altText: 'tailwind',
-        icon: TailwindIcon
-    },
-    {
-        id: '14',
-        name: 'SASS',
-        altText: 'SASS',
-        icon: SASSIcon
-    },
-    {
-        id: '15',
-        name: 'MaterialUI',
-        altText: 'material_ui',
-        icon: MaterialIcon
-    },
-    {
-        id: '16',
-        name: 'FramerMotion',
-        altText: 'framer_motion',
-        icon: FramerMotionIcon
-    },
-    {
-        id: '17',
-        name: 'Wordpress',
-        altText: 'wordpress',
-        icon: WordPressIcon
-    },
-    {
-        id: '18',
-        name: 'Elementor',
-        altText: 'elementor',
-        icon: ElementorIcon
-    },
-    {
-        id: '19',
-        name: 'Woocomerce',
-        altText: 'woocomerce',
-        icon: WoocommerceIcon
-    },
-    {
-        id: '20',
-        name: 'React Query',
-        altText: 'react_query',
-        icon: ReactQueryIcon
-    },
-    {
-        id: '21',
-        name: 'ExpressJs',
-        altText: 'express_js',
-        icon: ExpressJsIcon
-    },
-    {
-        id: '22',
-        name: 'NodeJs',
-        altText: 'node_js',
-        icon: NodeJsIcon
-    },
-    {
-        id: '23',
-        name: 'MongoDb',
-        altText: 'mongodb',
-        icon: MongoDbIcon
-    },
-    {
-        id: '24',
-        name: 'Trello',
-        altText: 'trello',
-        icon: TrelloIcon
-    },
-    {
-        id: '25',
-        name: 'Jira',
-        altText: 'jira',
-        icon: JiraIcon
-    },
-    {
-        id: '26',
-        name: 'Microsoft SQL Server',
-        altText: 'ssms',
-        icon: SSMSIcon
-    },
-]
+/** @deprecated Use SKILLS. Kept for existing imports. */
+export const LIST_TECH_MASTERED = SKILLS.map((skill, index) => ({
+  id: String(index),
+  name: skill.name,
+  altText: skill.altText,
+  icon: skill.icon,
+}));
 
 export const STATS_DATA: IStatsData[] = [
     {
@@ -578,7 +465,7 @@ export const STATS_DATA: IStatsData[] = [
     },
     {
       id: 'tech_mastered',
-      num: 27,
+      num: SKILLS.length,
       text: 'Technologies Mastered'
     },
     {

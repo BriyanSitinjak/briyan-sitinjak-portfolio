@@ -3,19 +3,19 @@
 import PageHeader from '@/src/components/PageHeader';
 import PageShell from '@/src/components/PageShell';
 import SectionFooter from '@/src/components/SectionFooter';
-import { LIST_TECH_MASTERED } from '@/src/constant/constant';
+import { SKILLS } from '@/src/constant/constant';
 import TechGrid from '../TechGrid';
 
 const ServicesSection = () => {
   return (
     <PageShell>
       <PageHeader
-        titleBefore="Technologies"
-        titleHighlight="Mastered"
-        description="Stack spanning frontend delivery, quality engineering, and operations—from Next.js and TypeScript to Cypress, Jest, SQL Server, and Docker—aligned with how I work on remote product teams."
+        titleBefore="Skills"
+        titleHighlight="in Context"
+        description="Web, mobile, AI, CMS, and platform skills—click any stack with project proof to jump straight to related work."
       />
       <TechGrid />
-      <SectionFooter count={LIST_TECH_MASTERED.length} label="technologies mastered" />
+      <SectionFooter count={SKILLS.length} label="skills mapped to real work" />
     </PageShell>
   );
 };

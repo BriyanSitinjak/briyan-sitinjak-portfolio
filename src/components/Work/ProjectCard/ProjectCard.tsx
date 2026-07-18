@@ -1,16 +1,22 @@
+'use client';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
-import { IExperiencesData } from '@/src/constant/type';
+import ExpandableText from '@/components/ExpandableText';
+import { IExperiencesData, SkillId } from '@/src/constant/type';
 import { fadeUpItem } from '@/lib/motion';
 import { glassCardClassName } from '@/components/ui/glass-card';
+import SkillChips from '../SkillChips';
+import ProjectStatusBadges from '../ProjectStatusBadges';
 
 interface ProjectCardProps {
   project: IExperiencesData;
+  activeSkill?: SkillId | null;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, activeSkill = null }: ProjectCardProps) => {
   const handleClick = () => {
     if (project.link) {
       window.open(project.link, '_blank', 'noopener,noreferrer');
@@ -23,6 +29,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className={`group relative overflow-hidden ${glassCardClassName}`}
     >
+      <ProjectStatusBadges status={project.status} deployment={project.deployment} />
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src={project.img}
@@ -33,7 +40,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-        {project.link && (
+        {project.link ? (
           <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <button
               type="button"
@@ -44,20 +51,21 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               <ExternalLink className="h-4 w-4" />
             </button>
           </div>
-        )}
+        ) : null}
       </div>
       <div className="p-4 sm:p-6">
         <h3 className="mb-2 text-xl font-semibold text-white transition-colors duration-300 group-hover:text-accent sm:text-2xl">
           {project.name}
         </h3>
-        <p className="line-clamp-3 text-sm leading-relaxed text-white/70 sm:text-base">
-          {project.description}
-        </p>
-        {!project.link && (
+        <ExpandableText>{project.description}</ExpandableText>
+        <div className="mt-4">
+          <SkillChips projectName={project.name} activeSkill={activeSkill} />
+        </div>
+        {!project.link ? (
           <span className="mt-3 inline-block text-xs italic text-white/50">
             Link not available
           </span>
-        )}
+        ) : null}
       </div>
     </motion.div>
   );

@@ -23,7 +23,7 @@ const STATUS_OPTIONS: { value: WorkStatusFilter; label: string }[] = [
   { value: 'all', label: 'All' },
   { value: 'active', label: 'Active' },
   { value: 'inactive', label: 'Inactive' },
-];
+]; // will be remove later
 
 const isSkillId = (value: string | null): value is SkillId =>
   !!value && SKILLS.some((skill) => skill.id === value);
